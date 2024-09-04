@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|c:\\users\\trakansakjungtrakarn\\desktop\\work\\c#\\app\\plugin\\dequip.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|solutionrelative:plugin\\dequip.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|c:\\users\\trakansakjungtrakarn\\desktop\\work\\c#\\app\\gis\\libs\\cop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|solutionrelative:gis\\libs\\cop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|c:\\users\\trakansakjungtrakarn\\desktop\\work\\c#\\app\\admin\\cgrp.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|solutionrelative:admin\\cgrp.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|c:\\users\\trakansakjungtrakarn\\desktop\\work\\c#\\app\\service\\talonnet\\delete.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|solutionrelative:service\\talonnet\\delete.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|c:\\users\\trakansakjungtrakarn\\desktop\\work\\c#\\app\\service\\talonnet\\download.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{CD2147FC-34C0-4667-87AE-82850659D1DD}|AFMProj.csproj|solutionrelative:service\\talonnet\\download.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CGrp.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\Admin\\CGrp.aspx.cs",
+              "RelativeDocumentMoniker": "Admin\\CGrp.aspx.cs",
+              "ToolTip": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\Admin\\CGrp.aspx.cs",
+              "RelativeToolTip": "Admin\\CGrp.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T04:30:41.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dEquip.ashx.cs",
+              "DocumentMoniker": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\PlugIn\\dEquip.ashx.cs",
+              "RelativeDocumentMoniker": "PlugIn\\dEquip.ashx.cs",
+              "ToolTip": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\PlugIn\\dEquip.ashx.cs",
+              "RelativeToolTip": "PlugIn\\dEquip.ashx.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAswCYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T04:19:12.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cop.js",
+              "DocumentMoniker": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\GIS\\libs\\cop.js",
+              "RelativeDocumentMoniker": "GIS\\libs\\cop.js",
+              "ToolTip": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\GIS\\libs\\cop.js",
+              "RelativeToolTip": "GIS\\libs\\cop.js",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAQwCABAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-09-02T04:18:51.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Delete.aspx",
+              "DocumentMoniker": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\Service\\Talonnet\\Delete.aspx",
+              "RelativeDocumentMoniker": "Service\\Talonnet\\Delete.aspx",
+              "ToolTip": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\Service\\Talonnet\\Delete.aspx",
+              "RelativeToolTip": "Service\\Talonnet\\Delete.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-09-02T03:57:37.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Download.aspx",
+              "DocumentMoniker": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\Service\\Talonnet\\Download.aspx",
+              "RelativeDocumentMoniker": "Service\\Talonnet\\Download.aspx",
+              "ToolTip": "C:\\Users\\TrakansakJungtrakarn\\Desktop\\work\\C#\\APP\\Service\\Talonnet\\Download.aspx",
+              "RelativeToolTip": "Service\\Talonnet\\Download.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-09-02T03:57:34.612Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

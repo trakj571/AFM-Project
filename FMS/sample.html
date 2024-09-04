@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,600&amp;subset=thai" rel="stylesheet">
+	<link rel="stylesheet" href="../_inc/icon/style.css">
+	<link rel="stylesheet" href="../_inc/css/normalize.css">
+	<link rel="stylesheet" href="../_inc/css/reset.css">
+	<link rel="stylesheet" href="../_inc/css/bootstrap.css">
+	<link rel="stylesheet" href="../_inc/css/bootstrap-touchspin.css">
+	<link rel="stylesheet" href="../_inc/css/bootstrap-select.css">
+	<link rel="stylesheet" href="../_inc/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../_inc/css/sweetalert2.css">
+	<link rel="stylesheet" href="../_inc/css/style.css">
+	<link rel="stylesheet" href="../_inc/css/responsive.css">
+</head>
+<body class="body-no-bg">
+	<div class="container">
+        <form id=FormSch runat=server>
+		<div class=row ">
+
+			<div class="col-md-12">
+				<div class="afms-content">
+					<div class="afms-page-title is-online">
+						ค้นหาผู้ใช้คลื่นความถี่
+					</div>
+                 
+				<!--div class="collapse" id="searchSection"-->
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="afms-field afms-field_input">
+								<label>ชื่อ</label>
+								<input id=Name runat=server type="text">
+								<span class="bar"></span>
+							</div>
+                            </div>
+						<div class="col-md-1">
+							<div class="afms-field afms-field_input">
+								<label>โทรศัพท์</label>
+								<input id=TelNo runat=server type="text">
+								<span class="bar"></span>
+							</div>
+						</div>
+						
+						<div class="col-md-12 text-center">
+							<a href="javascript:schData()" class="afms-btn afms-btn-primary"><i class="afms-ic_search"></i> ค้นหา</a>
+						</div>
+					</div>
+
+					</div>
+				<!--/div-->
+
+				
+			</div>
+		</div>
+        </form>
+		<div class="afms-push"></div>
+	</div>
+</body>
+
+</html>
+

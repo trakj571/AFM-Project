@@ -1,0 +1,17 @@
+Start Time,Stop Time,
+20/2/2020 10.00,21/2/2020 10.00,
+,,
+Start Frequency (MHz),Stop Frequency (MHz),Bandwidth (kHz)
+136,174,12.5
+,,
+Channel No.,Frequency (MHz), Occupancy (%)
+1,136,0
+2,136.0125,0
+3,136.025,0
+4,136.0375,0
+5,136.05,0
+6,136.0625,0
+7,136.075,0
+8,136.0875,0
+9,136.1,0
+10,136.1125,0

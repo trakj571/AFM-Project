@@ -1,0 +1,71 @@
+body
+{
+	margin:0;
+	font-family:"tahoma";
+	font-size:12px;
+	/*overflow-x:hidden;*/
+}
+img {border:0px}
+#map_container {display:none;}
+#posbar{height:25px;background:#eee;line-height:30px;text-align:right}
+#layer,#input,#info,#overview
+{
+	/*border:3px double #ccc;*/
+}
+#info_content {padding:5px;}
+#input_content  {padding:10px;overflow-y:scroll;}
+#input_content .selected {background:#99DEFD!important;border:1px solid #88CCFF!important}
+        
+.ptitle{background:#ccc;text-align:left;font-size:13px;color:#fff;height:18px;padding:0 0 0 10px}
+.pclose{height:16px;width:16px;float:right}
+.pscroll{overflow-y:scroll;height:auto;}
+.pscroll2{overflow-y:scroll;height:auto;}
+#info {position:absolute;z-index:100;background:#fff;border:1px solid #000;display:none;}
+#info_content{/*overflow-y:scroll;*/}
+#maptypectl {width:340px;}
+#maptypectl select{width:80px;height:22px}
+#maptypectl input{width:80px;height:22px;border:2px solid #ccc}
+#maptype_map {margin-left:5px;}
+
+#tabSch_keyword {width:180px}
+ .a_small{font-size:12px}
+.icon_small {width:16px;height:16px;}
+#tabSch_cond {background:#eee;padding:10px;}
+#tabSch_result {margin:5px 0 5px 5px;padding:5px;display:none;min-height:100px;}
+#tabSch_result a {font-size:13px;color:#000;text-decoration:none;margin:0px;padding:3px;width:95%;display: block;border:1px solid #fff}
+#tabSch_result a:hover {font-size:13px;color:#000;text-decoration:none;background:#eee;border:1px solid #ccf}
+#tabLand_result {margin:5px 0 5px 5px;padding:5px;display:none;min-height:100px;}
+#tabLand_result a {font-size:13px;color:#000;text-decoration:none;margin:0px;padding:3px;width:95%;display: block;border:1px solid #fff}
+#tabLand_result a:hover {font-size:13px;color:#000;text-decoration:none;background:#eee;border:1px solid #ccf}
+
+.selectIcon {/*background:url(../images/selected.png)*/border:2px dashed #00f}
+.poiIcon {/*background:url(../images/selected.png)*/border:2px dashed transparent}
+.dot-icon {
+	background: #ccf;
+	border: 1px solid #00f;
+}
+.poitype  {margin-left:20px}
+.poitype a {float:left;color:#000;text-decoration:none;display: block;min-width:220px;border:1px solid #fff} 
+.poitype a:hover {float:left;color:#000;text-decoration:none;display: block;background:#eee;border:1px solid #ccf}
+.poitype img {float:left;margin:5px 2px 5px 2px}
+.poitype div {float:left;margin:5px 2px 5px 5px}
+.poitype small {color:#777;font-size:11px}
+
+
+#jsddm {margin: 0;padding: 0;}
+#jsddm li {float: left;list-style: none;font: 12px Tahoma, arial}
+#jsddm li a {display: block;background:url(images/icons/bg_sel.png);padding:3px 0 0 5px;text-decoration: none;
+			width: 75px; height:19px; color: #000;white-space: nowrap;}
+#jsddm li ul{margin: 0;padding: 0;position: absolute;visibility: hidden;border-top: 1px solid white;z-index:100}
+#jsddm li ul li{float: none;display: inline}
+#jsddm li ul li a{width: 75px;background: #fff}
+#jsddm li ul li a:hover{background: #00c;color:#fff}
+
+
+#maptoolctl button{width:30px;height:30px;padding:0;border:2px solid #ccc;margin: 0 0 3px 0}
+#maptoolctl img{width:24px;height:24px;}
+#maptoolctl .selected{border:2px solid #f90!important;}
+.handCursor {cursor:hand!important}
+.defaultCursor {cursor:default!important}
+.crossCursor {cursor:crosshair!important}
+

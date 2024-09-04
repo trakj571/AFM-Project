@@ -1,0 +1,24 @@
+.afms-sec-sidebarbox { padding: 0 10px; }
+
+.afms-sec-sidebarbox .afms-sec-sidebar { width: 300px; position: absolute; left: 20px; transition: left 0.2s ease-out; margin-bottom: 20px; }
+.afms-sec-sidebarbox .afms-sec-sidebar.is-hide { left: -300px; }
+.afms-sec-sidebarbox .afms-sec-sidebar .afms-btn-hide { position: absolute; background-color: #333333; color: #ffffff; border-top-left-radius: 0; border-bottom-left-radius: 0; top: 50%; margin-top: -20px; right: -20px; bottom: 0; width: 20px; height: 40px; padding: 0; z-index: 2; font-size: 20px; }
+
+.afms-sec-sidebarbox .afms-sec-sidebar.is-hide .afms-btn-hide:before { position: absolute; left: 0; }
+.afms-sec-sidebarbox .afms-sec-sidebar.is-hide .afms-btn-hide:before { -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); -o-transform: rotateY(180deg); transform: rotateY(180deg); bottom: 50%; margin-bottom: -10px; }
+
+
+
+.afms-sec-content { padding-left: 360px; transition: padding-left 0.2s ease-out; }
+
+
+.afms-sec-content.is-hide { padding-left: 40px; }
+
+
+.afms-sidebar-title { position: relative; }
+  .afms-sidebar-title:after { content: '\e409'; font-family: 'afms'; position: absolute; font-size: 23px; top: 8px; transition: all 0.2s; -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -o-transform: rotate(-90deg); transform: rotate(-90deg); }
+  .afms-sidebar-title.collapsed:after { -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(-90deg); transform: rotate(90deg); }
+
+  .afms-sec-sidebar #sidebarFreqDb > ul > li > a { position: relative; }
+  .afms-sec-sidebar #sidebarFreqDb > ul > li > a:after { content: '\e409'; font-family: 'afms'; position: absolute; font-size: 23px; top: -4px; transition: all 0.2s; width: 23px; -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -o-transform: rotate(-90deg); transform: rotate(-90deg); }
+  .afms-sec-sidebar #sidebarFreqDb > ul > li > a.collapsed:after { -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }

@@ -1,0 +1,365 @@
+@font-face {
+  font-family: 'nbtc';
+  src:  url('fonts/nbtc.eot?q2arvs');
+  src:  url('fonts/nbtc.eot?q2arvs#iefix') format('embedded-opentype'),
+    url('fonts/nbtc.ttf?q2arvs') format('truetype'),
+    url('fonts/nbtc.woff?q2arvs') format('woff'),
+    url('fonts/nbtc.svg?q2arvs#nbtc') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="nbtc-ic"], [class*=" nbtc-ic"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'nbtc' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nbtc-ic_image:before {
+  content: "\e953";
+}
+.nbtc-ic_firstpage:before {
+  content: "\e951";
+}
+.nbtc-ic_lastpage:before {
+  content: "\e952";
+}
+.nbtc-ic_setexaminar:before {
+  content: "\e950";
+}
+.nbtc-ic_empty:before {
+  content: "\e94f";
+}
+.nbtc-ic_recievecard:before {
+  content: "\e94c";
+}
+.nbtc-ic_cardstatus:before {
+  content: "\e94d";
+}
+.nbtc-ic_exportcard:before {
+  content: "\e94e";
+}
+.nbtc-ic_people .path1:before {
+  content: "\e930";
+  color: rgb(148, 164, 164);
+}
+.nbtc-ic_people .path2:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(148, 164, 164);
+}
+.nbtc-ic_people .path3:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(44, 47, 51);
+}
+.nbtc-ic_people .path4:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(44, 47, 51);
+}
+.nbtc-ic_people .path5:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(44, 47, 51);
+}
+.nbtc-ic_people .path6:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(44, 47, 51);
+}
+.nbtc-ic_people .path7:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(44, 47, 51);
+}
+.nbtc-ic_people .path8:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(44, 47, 51);
+}
+.nbtc-ic_instutute .path1:before {
+  content: "\e938";
+  color: rgb(211, 215, 218);
+}
+.nbtc-ic_instutute .path2:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.nbtc-ic_instutute .path3:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.nbtc-ic_instutute .path4:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path5:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path6:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.nbtc-ic_instutute .path7:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(25, 54, 81);
+}
+.nbtc-ic_instutute .path8:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path9:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path10:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path11:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path12:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path13:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path14:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path15:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path16:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path17:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(46, 162, 219);
+}
+.nbtc-ic_instutute .path18:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(25, 54, 81);
+}
+.nbtc-ic_instutute .path19:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(25, 54, 81);
+}
+.nbtc-ic_instutute .path20:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(25, 54, 81);
+}
+.nbtc-ic_reciept:before {
+  content: "\e920";
+}
+.nbtc-ic_vat:before {
+  content: "\e92f";
+}
+.nbtc-ic_ar:before {
+  content: "\e91c";
+}
+.nbtc-ic_goc:before {
+  content: "\e91d";
+}
+.nbtc-ic_config:before {
+  content: "\e91e";
+}
+.nbtc-ic_announcer:before {
+  content: "\e91f";
+}
+.nbtc-ic_alarm:before {
+  content: "\e91b";
+}
+.nbtc-ic_video .path1:before {
+  content: "\e921";
+  color: rgb(241, 82, 73);
+}
+.nbtc-ic_video .path2:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(173, 14, 14);
+}
+.nbtc-ic_video .path3:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.nbtc-ic_video .path4:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(239, 239, 239);
+}
+.nbtc-ic_video .path5:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(173, 14, 14);
+}
+.nbtc-ic_video .path6:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(173, 14, 14);
+}
+.nbtc-ic_video .path7:before {
+  content: "\e927";
+  margin-left: -1em;
+  color: rgb(173, 14, 14);
+}
+.nbtc-ic_video .path8:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(173, 14, 14);
+}
+.nbtc-ic_video .path9:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(173, 14, 14);
+}
+.nbtc-ic_video .path10:before {
+  content: "\e92a";
+  margin-left: -1em;
+  color: rgb(241, 82, 73);
+}
+.nbtc-ic_video .path11:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(241, 82, 73);
+}
+.nbtc-ic_video .path12:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(241, 82, 73);
+}
+.nbtc-ic_video .path13:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(241, 82, 73);
+}
+.nbtc-ic_video .path14:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(241, 82, 73);
+}
+.nbtc-ic_book:before {
+  content: "\e91a";
+}
+.nbtc-ic_check:before {
+  content: "\e919";
+}
+.nbtc-ic_folder:before {
+  content: "\e915";
+}
+.nbtc-ic_folder_color .path1:before {
+  content: "\e916";
+  color: rgb(208, 153, 75);
+}
+.nbtc-ic_folder_color .path2:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(228, 231, 231);
+}
+.nbtc-ic_folder_color .path3:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(244, 180, 89);
+}
+.nbtc-ic_next:before {
+  content: "\e913";
+}
+.nbtc-ic_prev:before {
+  content: "\e914";
+}
+.nbtc-ic_apply:before {
+  content: "\e900";
+}
+.nbtc-ic_calendar:before {
+  content: "\e901";
+}
+.nbtc-ic_certificate:before {
+  content: "\e902";
+}
+.nbtc-ic_close:before {
+  content: "\e903";
+}
+.nbtc-ic_delete:before {
+  content: "\e904";
+}
+.nbtc-ic_download:before {
+  content: "\e905";
+}
+.nbtc-ic_dropdown:before {
+  content: "\e906";
+}
+.nbtc-ic_edit:before {
+  content: "\e907";
+}
+.nbtc-ic_home:before {
+  content: "\e908";
+}
+.nbtc-ic_menu:before {
+  content: "\e909";
+}
+.nbtc-ic_minus:before {
+  content: "\e90a";
+}
+.nbtc-ic_office:before {
+  content: "\e90b";
+}
+.nbtc-ic_password:before {
+  content: "\e90c";
+}
+.nbtc-ic_payment:before {
+  content: "\e90d";
+}
+.nbtc-ic_plus:before {
+  content: "\e90e";
+}
+.nbtc-ic_result:before {
+  content: "\e90f";
+}
+.nbtc-ic_search:before {
+  content: "\e910";
+}
+.nbtc-ic_test:before {
+  content: "\e911";
+}
+.nbtc-ic_user:before {
+  content: "\e912";
+}
+

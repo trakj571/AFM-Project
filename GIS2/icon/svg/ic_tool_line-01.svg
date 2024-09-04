@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{display:inline;fill:url(#SVGID_2_);stroke:#000000;stroke-width:3.37;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<g class="st0">
+		<g class="st1">
+			
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="50.9" y1="85.352" x2="50.9" y2="18.552" gradientTransform="matrix(1 0 0 -1 0 102.252)">
+				<stop  offset="0" style="stop-color:#7C83F6"/>
+				<stop  offset="1" style="stop-color:#ABB2F6"/>
+			</linearGradient>
+			<circle class="st2" cx="50.9" cy="50.3" r="33.4"/>
+			<path d="M50.9,18.4c17.6,0,31.9,14.3,31.9,31.9S68.5,82.2,50.9,82.2S19,67.9,19,50.3S33.3,18.4,50.9,18.4 M50.9,15.4
+				C31.7,15.4,16,31,16,50.3s15.6,34.9,34.9,34.9s34.9-15.6,34.9-34.9S70.2,15.4,50.9,15.4L50.9,15.4z"/>
+		</g>
+		<g class="st1">
+			<circle cx="50.9" cy="50.3" r="2.9"/>
+		</g>
+	</g>
+	<polyline class="st3" points="18.3,81 37.8,39.9 60.1,66.2 78.7,20.5 	"/>
+</g>
+<g class="st0">
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="50.55" y1="83.252" x2="50.55" y2="18.752" gradientTransform="matrix(1 0 0 -1 0 102.252)">
+		<stop  offset="0" style="stop-color:#7C83F6"/>
+		<stop  offset="1" style="stop-color:#ABB2F6"/>
+	</linearGradient>
+	<polygon class="st4" points="21.4,19 37,83.3 79.7,83.5 79.5,38.2 49.8,50.8 	"/>
+</g>
+</svg>

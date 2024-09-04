@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<!--
+array(1) {
+  ["_code"]=>
+  string(39) "157566584398062980871442080699889105485"
+}
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Playback (Remote)</title>
+
+    <!-- Bootstrap core CSS. This is just to make the demo look
+    nice. It's not required for videojs-contrib-hls to work. -->
+    
+    <link href="video/video-js.css" rel="stylesheet">
+
+    <link href="video/jquery-ui.css" rel="stylesheet">
+    <link href="video/jquery-ui-timepicker-addon.css" rel="stylesheet">
+
+    <script src="video/jquery-1.11.0.min.js"></script>
+    <script src="video/jquery-ui.js"></script>
+    <script src="video/jquery-ui-timepicker-addon.js"></script>
+    <script src="video/jquery-ui-sliderAccess.js"></script>
+
+    <script src="video/video.js"></script>
+    <script src="video/videojs-contrib-hls.js"></script>
+   
+    <!-- Some custom styles for the demo page -->
+    <style>
+      body {
+        /* padding-top: 50px; */
+        color: #868688;
+        background-color: #FAFCFF;
+      }
+      nav {
+        background-color: #e7e7e7
+      }
+      nav a {
+        color: #868688;
+      }
+      nav a:hover {
+        color: #606062;
+        text-decoration: none;
+      }
+      .navbar-toggle .icon-bar {
+        background-color: #868688;
+      }
+      .starter-template {
+        /* padding: 40px 15px; */
+        text-align: center;
+      }
+      .video-js {
+        margin: 0 auto;
+      }
+
+	.show tr th {
+		color: black;
+		border: 1px solid black;
+		text-align: center;
+	}
+	.show tr td {
+		border: 1px solid black;
+	}
+
+	.left {
+		text-align: left;
+	}
+	.right {
+		text-align: right;
+	}
+	.center {
+		text-align: center;
+	}
+
+      #url {
+         margin-top: 15px;
+         min-width: 450px;
+        padding: 5px;
+      }
+      #station {
+        margin-top: 15px;
+        width: 40px;
+      }
+      #limit, #offset {
+        margin-top: 15px;
+        width: 80px;
+      }
+      #start,#end {
+         margin-top: 15px;
+         min-width: 100px;
+        padding: 5px;
+	text-align: center;
+      }
+      #result {
+         margin-top: 15px;
+      }
+	#result table {
+		margin: 0 auto;
+	}
+
+    </style>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script>
+    function formatDate(date) {
+        var dd = date.getDate();
+        var mm = date.getMonth() + 1;
+        var yy = date.getFullYear();
+
+        if (dd < 10) { dd = "0" + dd; }
+        if (mm < 10) { mm = "0" + mm; }
+        var d = dd + "-" + mm + "-" + yy;
+        return d;
+    }
+
+    function formatTime(date) {
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+
+        if (hours < 10) { hours = "0" + hours; }
+        if (minutes < 10) { minutes = "0" + minutes; }
+        if (seconds < 10) { seconds = "0" + seconds; }
+        var time = hours + ':' + minutes + ':' + seconds;
+        return time;
+    }
+
+    String.prototype.toHHMMSS = function () {
+        var sec_num = parseInt(this, 10); // don't forget the second param
+        var hours = Math.floor(sec_num / 3600);
+        var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+        var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+        if (hours < 10) { hours = "0" + hours; }
+        if (minutes < 10) { minutes = "0" + minutes; }
+        if (seconds < 10) { seconds = "0" + seconds; }
+        var time = hours + ':' + minutes + ':' + seconds;
+        return time;
+    }
+
+    function load(playlist) {
+        $("#url").val(playlist);
+        $("#load").trigger("click");
+    }
+
+    function queue(playlist) {
+        //alert(playlist);
+        $.ajax({ url: "service/queue.php",
+            data: { playlist: playlist
+            },
+            dataType: "json"
+        }).done(function (result) {
+            alert(result.status + "," + result.msg);
+        });
+
+    }
+
+    function print_table(obj) {
+        var show_station = false;
+        var show_seek = false;
+        var body = "";
+
+        body += "total: " + obj.total;
+        body += ", limit: " + obj.limit;
+        body += ", offset: " + obj.offset;
+        body += ", order: " + obj.order;
+
+        body += "<div>(" + obj.data.length + " of " + obj.total + ")</div>";
+
+        body += "<table class='show'>";
+
+        body += "<tbody>";
+        for (var i = 0; i < obj.data.length; i++) {
+            var e = obj.data[i];
+
+            var d = new Date(0);
+            d.setUTCSeconds(e.start);
+            var start = formatDate(d) + " " + formatTime(d);
+
+            body += "<tr>";
+            body += "<td>" + (e.index + 1) + "</td>";
+
+            if (typeof e.station !== "undefined") {
+                body += "<td>" + e.station + "</td>";
+                show_station = true;
+            }
+
+            var playlist = "http://lmtr.nbtc.go.th" + obj.datapath + e.playlist;
+
+            body += "<td class='left'>" + playlist + "</td>";
+            body += "<td class='right'>" + start + "</td>";
+            //body += "<td class='right'>"+ e.end +"</td>";
+            body += "<td class='right'>" + e.duration.toHHMMSS() + "</td>";
+
+            if (typeof e.seek !== "undefined") {
+                body += "<td class='right'>" + e.seek + "</td>";
+                show_seek = true;
+            }
+
+            body += "<td>" + e.upload + "%</td>";
+            body += "<td>" + e.queue + "%</td>";
+
+            body += "<td><button onclick='load(\"" + playlist + "\")'>Play</button></td>";
+            body += "<td><button onclick='queue(\"" + e.playlist + "\")'>Queue</button></td>";
+            body += "</tr>";
+        }
+        body += "</tbody>";
+
+        body += "<thead>";
+        body += "<tr><th>#</th>";
+        if (show_station) {
+            body += "<th>Station</th>";
+        }
+        body += "<th>Playlist</th><th>Start</th><th>Duration</th>";
+        if (show_seek) {
+            body += "<th>Seek</th>";
+        }
+        body += "<th>Upload</th>";
+        body += "<th>Queue</th>";
+        body += "<th></th>";
+        body += "<th></th>";
+        body += "</tr></thead>";
+
+        body += "</table>";
+
+        $("#result").html(body);
+    }
+
+    $(document).ready(function () {
+
+        
+        var startDateTextBox = $('#start');
+        var endDateTextBox = $('#end');
+
+        $.timepicker.datetimeRange(
+        startDateTextBox,
+        endDateTextBox,
+        {
+            dateFormat: 'dd-mm-yy',
+            timeFormat: 'HH:mm:ss',
+            addSliderAccess: true,
+            sliderAccessArgs: { touchonly: false },
+            start: {}, // start picker options,
+            end: {} // end picker options
+        }
+);
+
+        var e = new Date();
+        var s = new Date(e.getTime() - (e.getTime() % (1000 * 60 * 60)));
+
+        $('#start').datetimepicker('setDate', s);
+        $('#end').datetimepicker('setDate', e);
+
+        $("#list").click(function () {
+            $.ajax({ url: "service/record.php",
+                data: { id: $("#station").val(),
+                    limit: $("#limit").val(),
+                    offset: $("#offset").val(),
+                    order: 1
+                },
+                dataType: "json"
+            }).done(function (result) {
+                print_table(result);
+            });
+
+        });
+
+        $("#search").click(function () {
+            var a = new Date($('#start').datetimepicker('getDate')).getTime() / 1000.0;
+            var b = new Date($('#end').datetimepicker('getDate')).getTime() / 1000.0;
+
+            $.ajax({ url: "service/record.php",
+                data: { id: $("#station").val(),
+                    start: a,
+                    end: b,
+                    limit: $("#limit").val(),
+                    offset: $("#offset").val()
+                },
+                dataType: "json"
+            }).done(function (result) {
+                print_table(result);
+            });
+
+        });
+
+    });
+</script>
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <section class="starter-template">
+        <h1>Playback</h1>
+
+        <video id=example-video width=400 height=150 class="video-js vjs-default-skin" controls>
+          <source
+             src="http://lmtr.nbtc.go.th/hls/live/AFM0005.sub/playlist.m3u8"
+             type="application/x-mpegURL">
+        </video>
+
+        <form id=load-url>
+          <label>
+            Video URL:
+            <input id=url type=url value="http://lmtr.nbtc.go.th/hls/live/AFM0005.sub/playlist.m3u8">
+          </label>
+          <button id="load" type=submit>Load</button>
+        </form>
+
+	station: <select id="station">
+<option value="0">All</option>
+<!--
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+-->
+	</select>
+        <button id="list">List</button><br/>
+	limit: <input id="limit" value="100"/><br/>
+	offset: <input id="offset" value="0"/><br/>
+
+	start: <input id="start" type="text" value=""/>
+	end: <input id="end" type="text" value=""/>
+	<button id="search">Search</button>
+
+	<div id="result"></div>
+
+      </section>
+
+    </div><!-- /.container -->
+
+    <script>
+        (function (window, videojs) {
+            var player = window.player = videojs('example-video');
+
+            // hook up the video switcher
+            var loadUrl = document.getElementById('load-url');
+            var url = document.getElementById('url');
+            loadUrl.addEventListener('submit', function (event) {
+                event.preventDefault();
+                player.src({
+                    src: url.value,
+                    type: 'application/x-mpegURL'
+                });
+                return false;
+            });
+        } (window, window.videojs));
+    </script>
+
+
+  </body>
+</html>

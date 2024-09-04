@@ -1,0 +1,2322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD2147FC-34C0-4667-87AE-82850659D1DD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AFMProj</RootNamespace>
+    <AssemblyName>AFMProj</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>LIB#\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.Reduced.1.9.1.8\lib\net20\Ionic.Zip.Reduced.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>LIB#\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpKml, Version=2.1.0.0, Culture=neutral, PublicKeyToken=9bb853c026a5c0ac, processorArchitecture=MSIL">
+      <HintPath>packages\SharpKml.Core.2.1.0\lib\portable-net4+sl5+wp8+win8\SharpKml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpKml.Kmz, Version=2.0.2.0, Culture=neutral, PublicKeyToken=9bb853c026a5c0ac, processorArchitecture=MSIL">
+      <HintPath>packages\SharpKml.Kmz.2.0.2.2\lib\net40\SharpKml.Kmz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\BData.aspx" />
+    <Content Include="Admin\BDataAdd.aspx" />
+    <Content Include="Admin\CGrp.aspx" />
+    <Content Include="Admin\CGrpAdd.aspx" />
+    <Content Include="Admin\CLoadTpl.aspx" />
+    <Content Include="Admin\CFieldT.aspx" />
+    <Content Include="Admin\Domain.aspx" />
+    <Content Include="Admin\DomainAdd.aspx" />
+    <Content Include="Admin\EquipAdd.aspx" />
+    <Content Include="Admin\Equip.aspx" />
+    <Content Include="Admin\CTmplAdd.aspx" />
+    <Content Include="Admin\CTmpl.aspx" />
+    <Content Include="Admin\CSaveTpl.aspx" />
+    <Content Include="Admin\CTypeAdd.aspx" />
+    <Content Include="Admin\CType.aspx" />
+    <Content Include="Admin\CField.aspx" />
+    <Content Include="Admin\GISLayerAdd.aspx" />
+    <Content Include="Admin\GISLayer.aspx" />
+    <Content Include="Admin\LayerAdd.aspx" />
+    <Content Include="Admin\Layer.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Download.aspx" />
+    <Content Include="Admin\DownloadAdd.aspx" />
+    <Content Include="Admin\History.aspx" />
+    <Content Include="Admin\Org.aspx" />
+    <Content Include="Admin\OrgAdd.aspx" />
+    <Content Include="Admin\OrgVer.aspx" />
+    <Content Include="Admin\OrgVerAdd.aspx" />
+    <Content Include="Admin\UGrp.aspx" />
+    <Content Include="Admin\UGrpAdd.aspx" />
+    <Content Include="Admin\Usr.aspx" />
+    <Content Include="Admin\UsrAdd.aspx" />
+    <Content Include="area\index.html" />
+    <Content Include="BI\FreqStat.aspx" />
+    <Content Include="DashB\Download.aspx" />
+    <Content Include="DashB\Default.aspx" />
+    <Content Include="DashB\HTMLPage1.htm" />
+    <Content Include="DMS\AnChkFq.aspx" />
+    <Content Include="DMS\AnChk.aspx" />
+    <Content Include="DMS\AnEvent.aspx" />
+    <Content Include="DMS\AnFStr.aspx" />
+    <Content Include="DMS\AnInfo.aspx" />
+    <Content Include="DMS\AnOcc.aspx" />
+    <Content Include="DMS\AnRep.aspx" />
+    <Content Include="DMS\AnInfoEdit.aspx" />
+    <Content Include="DMS\FreqStatMap.aspx" />
+    <Content Include="DMS\FreqStatChart.aspx" />
+    <Content Include="DMS\FreqStat.aspx" />
+    <Content Include="DMS\mFreqTB.aspx" />
+    <Content Include="DMS\FreqTB.aspx" />
+    <Content Include="DMS\DImpLog.aspx" />
+    <Content Include="DMS\Default.aspx" />
+    <Content Include="DMS\DImp.aspx" />
+    <Content Include="DMS\AnRepDet.aspx" />
+    <Content Include="FMS\afm2.html" />
+    <Content Include="FMS\AnInfoEdit.aspx" />
+    <Content Include="FMS\Audio2.aspx" />
+    <Content Include="FMS\AImp.aspx" />
+    <Content Include="FMS\Download.aspx" />
+    <Content Include="FMS\FMon0.aspx" />
+    <Content Include="FMS\FMon2File.aspx" />
+    <Content Include="FMS\FMon2.aspx" />
+    <Content Include="FMS\HSchDialog.aspx" />
+    <Content Include="DMS\Menu.asp" />
+    <Content Include="DMS\PrintChart.aspx" />
+    <Content Include="DMS\PrintOcc.aspx" />
+    <Content Include="FMS\AnInfo.aspx" />
+    <Content Include="FMS\AnChk.aspx" />
+    <Content Include="FMS\AnSMon.aspx" />
+    <Content Include="FMS\AnOcc.aspx" />
+    <Content Include="FMS\AnEvent.aspx" />
+    <Content Include="FMS\AnFStr.aspx" />
+    <Content Include="FMS\Audio.aspx" />
+    <Content Include="FMS\mFDBStn.aspx" />
+    <Content Include="FMS\PlayRec3.aspx" />
+    <Content Include="FMS\PlayRec2.aspx" />
+    <Content Include="FMS\PlayRec.aspx" />
+    <Content Include="FMS\PrintOcc.aspx" />
+    <Content Include="FMS\sample.html" />
+    <Content Include="FMS\Test3.htm" />
+    <Content Include="FMS\data\dInfo.ashx" />
+    <Content Include="FMS\Test2.htm" />
+    <Content Include="FMS\FDet.aspx" />
+    <Content Include="DMS\Conf.aspx" />
+    <Content Include="FMS\HDet.aspx" />
+    <Content Include="FMS\FUAdd.aspx" />
+    <Content Include="FMS\__HAdd.aspx" />
+    <Content Include="FMS\HSch.aspx" />
+    <Content Include="FMS\__FAdd.aspx" />
+    <Content Include="FMS\FSch.aspx" />
+    <Content Include="FMS\Default.aspx" />
+    <Content Include="FMS\FMon.aspx" />
+    <Content Include="FMS\Menu.asp" />
+    <Content Include="FMS\Test.htm" />
+    <Content Include="FMS\video\jquery-1.11.0.min.js" />
+    <Content Include="FMS\video\jquery-ui-sliderAccess.js" />
+    <Content Include="FMS\video\jquery-ui-timepicker-addon.css" />
+    <Content Include="FMS\video\jquery-ui-timepicker-addon.js" />
+    <Content Include="FMS\video\jquery-ui.css" />
+    <Content Include="FMS\video\jquery-ui.js" />
+    <Content Include="FMS\video\video-js.css" />
+    <Content Include="FMS\video\video.js" />
+    <Content Include="FMS\video\videojs-contrib-hls.js" />
+    <Content Include="GIS2\Cop.aspx" />
+    <Content Include="GIS2\css\bootstrap-colorpicker.css" />
+    <Content Include="GIS2\css\bootstrap-datepicker.css" />
+    <Content Include="GIS2\css\bootstrap-datepicker3.css" />
+    <Content Include="GIS2\css\bootstrap-select.min.css" />
+    <Content Include="GIS2\css\bootstrap-timepicker.css" />
+    <Content Include="GIS2\css\bootstrap.min.css" />
+    <Content Include="GIS2\css\jquery-ui.css" />
+    <Content Include="GIS2\css\jstree-theme.css" />
+    <Content Include="GIS2\css\jstree.min.css" />
+    <Content Include="GIS2\css\responsive.css" />
+    <Content Include="GIS2\css\style.css" />
+    <Content Include="GIS2\css\test.html" />
+    <Content Include="GIS2\icon\demo-files\demo.css" />
+    <Content Include="GIS2\icon\demo-files\demo.js" />
+    <Content Include="GIS2\icon\demo.html" />
+    <Content Include="GIS2\icon\fonts\afms.svg" />
+    <Content Include="GIS2\icon\Read Me.txt" />
+    <Content Include="GIS2\icon\style.css" />
+    <Content Include="GIS2\icon\svg\ic_3d.svg" />
+    <Content Include="GIS2\icon\svg\ic_brightness.svg" />
+    <Content Include="GIS2\icon\svg\ic_check_locationheight.svg" />
+    <Content Include="GIS2\icon\svg\ic_close_tools.svg" />
+    <Content Include="GIS2\icon\svg\ic_eventviewer.svg" />
+    <Content Include="GIS2\icon\svg\ic_fullscreen.svg" />
+    <Content Include="GIS2\icon\svg\ic_gotolocation.svg" />
+    <Content Include="GIS2\icon\svg\ic_information.svg" />
+    <Content Include="GIS2\icon\svg\ic_linear_elevation.svg" />
+    <Content Include="GIS2\icon\svg\ic_location.svg" />
+    <Content Include="GIS2\icon\svg\ic_measure_area.svg" />
+    <Content Include="GIS2\icon\svg\ic_measure_areaheight.svg" />
+    <Content Include="GIS2\icon\svg\ic_measure_circle.svg" />
+    <Content Include="GIS2\icon\svg\ic_measure_circleheight.svg" />
+    <Content Include="GIS2\icon\svg\ic_measure_distance.svg" />
+    <Content Include="GIS2\icon\svg\ic_move.svg" />
+    <Content Include="GIS2\icon\svg\ic_print.svg" />
+    <Content Include="GIS2\icon\svg\ic_report.svg" />
+    <Content Include="GIS2\icon\svg\ic_sensormonitor.svg" />
+    <Content Include="GIS2\icon\svg\ic_setting.svg" />
+    <Content Include="GIS2\icon\svg\ic_streetview.svg" />
+    <Content Include="GIS2\icon\svg\ic_tool_circle-01.svg" />
+    <Content Include="GIS2\icon\svg\ic_tool_circle.svg" />
+    <Content Include="GIS2\icon\svg\ic_tool_line-01.svg" />
+    <Content Include="GIS2\icon\svg\ic_tool_line.svg" />
+    <Content Include="GIS2\icon\svg\ic_tool_pin-01.svg" />
+    <Content Include="GIS2\icon\svg\ic_tool_pin.svg" />
+    <Content Include="GIS2\icon\svg\ic_tool_shape-01.svg" />
+    <Content Include="GIS2\icon\svg\ic_tool_shape.svg" />
+    <Content Include="GIS2\icon\svg\ic_zoom.svg" />
+    <Content Include="GIS2\img\32px.png" />
+    <Content Include="GIS2\img\logo_s.png" />
+    <Content Include="GIS2\img\user.png" />
+    <Content Include="GIS2\js\bootstrap-colorpicker.js" />
+    <Content Include="GIS2\js\bootstrap-datepicker-thai.js" />
+    <Content Include="GIS2\js\bootstrap-datepicker.js" />
+    <Content Include="GIS2\js\bootstrap-select.min.js" />
+    <Content Include="GIS2\js\bootstrap-timepicker.js" />
+    <Content Include="GIS2\js\bootstrap.min.js" />
+    <Content Include="GIS2\js\function.js" />
+    <Content Include="GIS2\js\jasny-bootstrap.min.js" />
+    <Content Include="GIS2\js\jquery-3.3.1.min.js" />
+    <Content Include="GIS2\js\jquery-ui.js" />
+    <Content Include="GIS2\js\jquery.inputmask.bundle.js" />
+    <Content Include="GIS2\js\jstree.min.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.da.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.de.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.el.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.es.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.et.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.he.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.id.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.is.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.it.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.th.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="GIS2\js\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="GIS2\js\popper.min.js" />
+    <Content Include="GIS\Cop.aspx" />
+    <Content Include="GIS\Copy of Cop.aspx" />
+    <Content Include="GIS\EmapRep.asp" />
+    <Content Include="GIS\data\dPoiLyGets.ashx" />
+    <Content Include="GIS\ExportPOI.aspx" />
+    <Content Include="GIS\Kmz\Export.aspx" />
+    <Content Include="GIS\libs\coptools.js" />
+    <Content Include="GIS\libs\mapdir-ap.js" />
+    <Content Include="GIS\libs\mapdir.js" />
+    <Content Include="GIS\Print_map.aspx" />
+    <Content Include="GIS\StView.aspx" />
+    <Content Include="GIS\data\addpoi.aspx" />
+    <Content Include="GIS\EMap.aspx" />
+    <Content Include="GIS\EmapEdit.asp" />
+    <Content Include="GIS\EmapView.asp" />
+    <Content Include="GIS\libs\cop.js" />
+    <Content Include="GIS\libs\pCop.js" />
+    <Content Include="GIS\libs\Polyline.encoded.js" />
+    <Content Include="GIS\Map.aspx" />
+    <Content Include="GIS\images\arrow-DD.png" />
+    <Content Include="GIS\images\arrow-LL.png" />
+    <Content Include="GIS\images\arrow-RR.png" />
+    <Content Include="GIS\images\arrow-UU.png" />
+    <Content Include="GIS\images\arrow_down.png" />
+    <Content Include="GIS\images\arrow_up.png" />
+    <Content Include="GIS\images\bdel.gif" />
+    <Content Include="GIS\images\bedit.gif" />
+    <Content Include="GIS\images\bglogin.png" />
+    <Content Include="GIS\images\bus.png" />
+    <Content Include="GIS\images\car.png" />
+    <Content Include="GIS\images\chkbox.png" />
+    <Content Include="GIS\images\chkboxc.png" />
+    <Content Include="GIS\images\cir.png" />
+    <Content Include="GIS\images\close.png" />
+    <Content Include="GIS\images\cmd.png" />
+    <Content Include="GIS\images\ev0.png" />
+    <Content Include="GIS\images\ev1.png" />
+    <Content Include="GIS\images\ev2.png" />
+    <Content Include="GIS\images\ev3.png" />
+    <Content Include="GIS\images\ev4.png" />
+    <Content Include="GIS\images\ev5.png" />
+    <Content Include="GIS\images\ev6.png" />
+    <Content Include="GIS\images\icons\bg_sel.png" />
+    <Content Include="GIS\images\icons\b_3d.png" />
+    <Content Include="GIS\images\icons\b_AOS.png" />
+    <Content Include="GIS\images\icons\b_cir.png" />
+    <Content Include="GIS\images\icons\b_Clr.png" />
+    <Content Include="GIS\images\icons\b_Deep.png" />
+    <Content Include="GIS\images\icons\b_Dim.png" />
+    <Content Include="GIS\images\icons\b_Env.png" />
+    <Content Include="GIS\images\icons\b_fusc.png" />
+    <Content Include="GIS\images\icons\b_goto.png" />
+    <Content Include="GIS\images\icons\b_Highest.png" />
+    <Content Include="GIS\images\icons\b_info.png" />
+    <Content Include="GIS\images\icons\b_line.png" />
+    <Content Include="GIS\images\icons\b_loc.png" />
+    <Content Include="GIS\images\icons\b_LOS.png" />
+    <Content Include="GIS\images\icons\b_LOS_.png" />
+    <Content Include="GIS\images\icons\b_manual.png" />
+    <Content Include="GIS\images\icons\b_mArea.png" />
+    <Content Include="GIS\images\icons\b_mCir.png" />
+    <Content Include="GIS\images\icons\b_mDist.png" />
+    <Content Include="GIS\images\icons\b_nav.png" />
+    <Content Include="GIS\images\icons\b_nbtc.png" />
+    <Content Include="GIS\images\icons\b_pan.png" />
+    <Content Include="GIS\images\icons\b_pin.png" />
+    <Content Include="GIS\images\icons\b_print.png" />
+    <Content Include="GIS\images\icons\b_Rep.png" />
+    <Content Include="GIS\images\icons\b_sett.png" />
+    <Content Include="GIS\images\icons\b_shape.png" />
+    <Content Include="GIS\images\icons\b_wlv.png" />
+    <Content Include="GIS\images\icons\b_zoom.png" />
+    <Content Include="GIS\images\icons\close.png" />
+    <Content Include="GIS\images\icons\Down.png" />
+    <Content Include="GIS\images\icons\droppin.png" />
+    <Content Include="GIS\images\icons\Icon-76.png" />
+    <Content Include="GIS\images\icons\info.png" />
+    <Content Include="GIS\images\icons\left.png" />
+    <Content Include="GIS\images\icons\location.png" />
+    <Content Include="GIS\images\icons\marker.png" />
+    <Content Include="GIS\images\icons\Right.png" />
+    <Content Include="GIS\images\icons\sign_out.png" />
+    <Content Include="GIS\images\icons\target.png" />
+    <Content Include="GIS\images\icons\tree-close.png" />
+    <Content Include="GIS\images\icons\tree-open.png" />
+    <Content Include="GIS\images\icons\Up.png" />
+    <Content Include="GIS\images\icons\user.png" />
+    <Content Include="GIS\images\icons\x.png" />
+    <Content Include="GIS\images\icons\Zin.png" />
+    <Content Include="GIS\images\icons\Zout.png" />
+    <Content Include="GIS\images\infomin.png" />
+    <Content Include="GIS\images\line.png" />
+    <Content Include="GIS\images\loading.gif" />
+    <Content Include="GIS\images\Login.jpg" />
+    <Content Include="GIS\images\Logo.png" />
+    <Content Include="GIS\images\LogoBg.png" />
+    <Content Include="GIS\images\logo_m2.png" />
+    <Content Include="GIS\images\markup\arrow_c.png" />
+    <Content Include="GIS\images\markup\bgDet.png" />
+    <Content Include="GIS\images\markup\bgfooter.png" />
+    <Content Include="GIS\images\markup\bgSch.png" />
+    <Content Include="GIS\images\markup\bgSch_.png" />
+    <Content Include="GIS\images\markup\bgtopic.png" />
+    <Content Include="GIS\images\markup\btn_1.png" />
+    <Content Include="GIS\images\markup\btn_2.png" />
+    <Content Include="GIS\images\markup\btn_3.png" />
+    <Content Include="GIS\images\markup\btn_4.png" />
+    <Content Include="GIS\images\markup\btn_5.png" />
+    <Content Include="GIS\images\markup\btn_6.png" />
+    <Content Include="GIS\images\markup\default.css" />
+    <Content Include="GIS\images\markup\fonts.css" />
+    <Content Include="GIS\images\markup\icon_search.png" />
+    <Content Include="GIS\images\markup\icon_select.png" />
+    <Content Include="GIS\images\markup\icon_select2.png" />
+    <Content Include="GIS\images\markup\iDown.png" />
+    <Content Include="GIS\images\markup\iRst.png" />
+    <Content Include="GIS\images\markup\iSch.png" />
+    <Content Include="GIS\images\markup\iUp.png" />
+    <Content Include="GIS\images\markup\loading.gif" />
+    <Content Include="GIS\images\markup\main_bgHeader.png" />
+    <Content Include="GIS\images\markup\rightbox.png" />
+    <Content Include="GIS\images\markup\search.css" />
+    <Content Include="GIS\images\max.png" />
+    <Content Include="GIS\images\menu.png" />
+    <Content Include="GIS\images\min.png" />
+    <Content Include="GIS\images\mmap.png" />
+    <Content Include="GIS\images\pause.png" />
+    <Content Include="GIS\images\pauseg.png" />
+    <Content Include="GIS\images\pin.png" />
+    <Content Include="GIS\images\play.png" />
+    <Content Include="GIS\images\playg.png" />
+    <Content Include="GIS\images\polygon.png" />
+    <Content Include="GIS\images\posArr.png" />
+    <Content Include="GIS\images\sat-a.png" />
+    <Content Include="GIS\images\sat-f.png" />
+    <Content Include="GIS\images\sat-v.png" />
+    <Content Include="GIS\images\selected.png" />
+    <Content Include="GIS\images\spc.gif" />
+    <Content Include="GIS\images\stop.png" />
+    <Content Include="GIS\images\stopg.png" />
+    <Content Include="GIS\images\Style.css" />
+    <Content Include="GIS\images\truck.png" />
+    <Content Include="GIS\libs\Bing.js" />
+    <Content Include="GIS\libs\CalendarTH\agenda.js" />
+    <Content Include="GIS\libs\CalendarTH\calbtn.gif" />
+    <Content Include="GIS\libs\CalendarTH\ipopeng.htm" />
+    <Content Include="GIS\libs\CalendarTH\normal.css" />
+    <Content Include="GIS\libs\CalendarTH\normal.js" />
+    <Content Include="GIS\libs\CalendarTH\plugins.js" />
+    <Content Include="GIS\libs\Calendar\agenda.js" />
+    <Content Include="GIS\libs\Calendar\calbtn.gif" />
+    <Content Include="GIS\libs\Calendar\ipopeng.htm" />
+    <Content Include="GIS\libs\Calendar\normal.css" />
+    <Content Include="GIS\libs\Calendar\normal.js" />
+    <Content Include="GIS\libs\Calendar\plugins.js" />
+    <Content Include="GIS\libs\Copy of mapui.prop.js" />
+    <Content Include="GIS\libs\cp.js" />
+    <Content Include="GIS\libs\dpv.js" />
+    <Content Include="GIS\libs\dpv2.js" />
+    <Content Include="GIS\libs\drag.js" />
+    <Content Include="GIS\libs\fancybox\blank.gif" />
+    <Content Include="GIS\libs\fancybox\fancybox-x.png" />
+    <Content Include="GIS\libs\fancybox\fancybox-y.png" />
+    <Content Include="GIS\libs\fancybox\fancybox.png" />
+    <Content Include="GIS\libs\fancybox\fancy_close.png" />
+    <Content Include="GIS\libs\fancybox\fancy_loading.png" />
+    <Content Include="GIS\libs\fancybox\fancy_nav_left.png" />
+    <Content Include="GIS\libs\fancybox\fancy_nav_right.png" />
+    <Content Include="GIS\libs\fancybox\fancy_shadow_e.png" />
+    <Content Include="GIS\libs\fancybox\fancy_shadow_n.png" />
+    <Content Include="GIS\libs\fancybox\fancy_shadow_ne.png" />
+    <Content Include="GIS\libs\fancybox\fancy_shadow_nw.png" />
+    <Content Include="GIS\libs\fancybox\fancy_shadow_s.png" />
+    <Content Include="GIS\libs\fancybox\fancy_shadow_se.png" />
+    <Content Include="GIS\libs\fancybox\fancy_shadow_sw.png" />
+    <Content Include="GIS\libs\fancybox\fancy_shadow_w.png" />
+    <Content Include="GIS\libs\fancybox\fancy_title_left.png" />
+    <Content Include="GIS\libs\fancybox\fancy_title_main.png" />
+    <Content Include="GIS\libs\fancybox\fancy_title_over.png" />
+    <Content Include="GIS\libs\fancybox\fancy_title_right.png" />
+    <Content Include="GIS\libs\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="GIS\libs\fancybox\jquery.fancybox-1.3.1.css" />
+    <Content Include="GIS\libs\fancybox\jquery.fancybox-1.3.1.ie.css" />
+    <Content Include="GIS\libs\fancybox\jquery.fancybox-1.3.1.ie.s.css" />
+    <Content Include="GIS\libs\fancybox\jquery.fancybox-1.3.1.js" />
+    <Content Include="GIS\libs\fancybox\jquery.fancybox-1.3.1.pack.js" />
+    <Content Include="GIS\libs\fancybox\jquery.fancybox-1.3.1.x.css" />
+    <Content Include="GIS\libs\fancybox\jquery.mousewheel-3.0.2.pack.js" />
+    <Content Include="GIS\libs\flowplayer\flashlsFlowPlayer-0.3.5.swf" />
+    <Content Include="GIS\libs\flowplayer\flowplayer-3.2.13.min.js" />
+    <Content Include="GIS\libs\flowplayer\flowplayer-3.2.18.swf" />
+    <Content Include="GIS\libs\flowplayer\flowplayer-3.2.7.swf" />
+    <Content Include="GIS\libs\flowplayer\flowplayer.controls-3.2.16.swf" />
+    <Content Include="GIS\libs\flowplayer\flowplayer.ipad-3.2.13.min.js" />
+    <Content Include="GIS\libs\flowplayer\flowplayer.rtmp-3.2.13.swf" />
+    <Content Include="GIS\libs\highchart\adapters\mootools-adapter.js" />
+    <Content Include="GIS\libs\highchart\adapters\mootools-adapter.src.js" />
+    <Content Include="GIS\libs\highchart\adapters\prototype-adapter.js" />
+    <Content Include="GIS\libs\highchart\adapters\prototype-adapter.src.js" />
+    <Content Include="GIS\libs\highchart\adapters\standalone-framework.js" />
+    <Content Include="GIS\libs\highchart\adapters\standalone-framework.src.js" />
+    <Content Include="GIS\libs\highchart\highcharts-all.js" />
+    <Content Include="GIS\libs\highchart\highcharts-more.js" />
+    <Content Include="GIS\libs\highchart\highcharts-more.src.js" />
+    <Content Include="GIS\libs\highchart\highcharts.js" />
+    <Content Include="GIS\libs\highchart\highcharts.src.js" />
+    <Content Include="GIS\libs\highchart\modules\annotations.js" />
+    <Content Include="GIS\libs\highchart\modules\annotations.src.js" />
+    <Content Include="GIS\libs\highchart\modules\canvas-tools.js" />
+    <Content Include="GIS\libs\highchart\modules\canvas-tools.src.js" />
+    <Content Include="GIS\libs\highchart\modules\data.js" />
+    <Content Include="GIS\libs\highchart\modules\data.src.js" />
+    <Content Include="GIS\libs\highchart\modules\drilldown.js" />
+    <Content Include="GIS\libs\highchart\modules\drilldown.src.js" />
+    <Content Include="GIS\libs\highchart\modules\exporting.js" />
+    <Content Include="GIS\libs\highchart\modules\exporting.src.js" />
+    <Content Include="GIS\libs\highchart\modules\funnel.js" />
+    <Content Include="GIS\libs\highchart\modules\funnel.src.js" />
+    <Content Include="GIS\libs\highchart\modules\heatmap.js" />
+    <Content Include="GIS\libs\highchart\modules\heatmap.src.js" />
+    <Content Include="GIS\libs\highchart\modules\map.js" />
+    <Content Include="GIS\libs\highchart\modules\map.src.js" />
+    <Content Include="GIS\libs\highchart\modules\no-data-to-display.js" />
+    <Content Include="GIS\libs\highchart\modules\no-data-to-display.src.js" />
+    <Content Include="GIS\libs\highchart\pattern-fill.js" />
+    <Content Include="GIS\libs\highchart\themes\dark-blue.js" />
+    <Content Include="GIS\libs\highchart\themes\dark-green.js" />
+    <Content Include="GIS\libs\highchart\themes\gray.js" />
+    <Content Include="GIS\libs\highchart\themes\grid.js" />
+    <Content Include="GIS\libs\highchart\themes\skies.js" />
+    <Content Include="GIS\libs\jquery.js" />
+    <Content Include="GIS\libs\jquery.tools.min.js" />
+    <Content Include="GIS\libs\jstree\img\file.png" />
+    <Content Include="GIS\libs\jstree\jquery.jstree.js" />
+    <Content Include="GIS\libs\jstree\themes\apple\bg.jpg" />
+    <Content Include="GIS\libs\jstree\themes\apple\d.png" />
+    <Content Include="GIS\libs\jstree\themes\apple\dot_for_ie.gif" />
+    <Content Include="GIS\libs\jstree\themes\apple\style.css" />
+    <Content Include="GIS\libs\jstree\themes\apple\throbber.gif" />
+    <Content Include="GIS\libs\jstree\themes\classic\d.gif" />
+    <Content Include="GIS\libs\jstree\themes\classic\d.png" />
+    <Content Include="GIS\libs\jstree\themes\classic\dot_for_ie.gif" />
+    <Content Include="GIS\libs\jstree\themes\classic\style.css" />
+    <Content Include="GIS\libs\jstree\themes\classic\throbber.gif" />
+    <Content Include="GIS\libs\jstree\themes\default-rtl\d.gif" />
+    <Content Include="GIS\libs\jstree\themes\default-rtl\d.png" />
+    <Content Include="GIS\libs\jstree\themes\default-rtl\dots.gif" />
+    <Content Include="GIS\libs\jstree\themes\default-rtl\style.css" />
+    <Content Include="GIS\libs\jstree\themes\default-rtl\throbber.gif" />
+    <Content Include="GIS\libs\jstree\themes\default\d.gif" />
+    <Content Include="GIS\libs\jstree\themes\default\d.png" />
+    <Content Include="GIS\libs\jstree\themes\default\style.css" />
+    <Content Include="GIS\libs\jstree\themes\default\throbber.gif" />
+    <Content Include="GIS\libs\layout.css" />
+    <Content Include="GIS\libs\leaflet-0.6.4\images\layers-2x.png" />
+    <Content Include="GIS\libs\leaflet-0.6.4\images\layers.png" />
+    <Content Include="GIS\libs\leaflet-0.6.4\images\marker-icon-2x.png" />
+    <Content Include="GIS\libs\leaflet-0.6.4\images\marker-icon.png" />
+    <Content Include="GIS\libs\leaflet-0.6.4\images\marker-shadow.png" />
+    <Content Include="GIS\libs\leaflet-0.6.4\leaflet-src.js" />
+    <Content Include="GIS\libs\leaflet-0.6.4\leaflet.css" />
+    <Content Include="GIS\libs\leaflet-0.6.4\leaflet.ie.css" />
+    <Content Include="GIS\libs\leaflet-0.6.4\leaflet.js" />
+    <Content Include="GIS\libs\leaflet-0.7.2\images\layers-2x.png" />
+    <Content Include="GIS\libs\leaflet-0.7.2\images\layers.png" />
+    <Content Include="GIS\libs\leaflet-0.7.2\images\marker-icon-2x.png" />
+    <Content Include="GIS\libs\leaflet-0.7.2\images\marker-icon.png" />
+    <Content Include="GIS\libs\leaflet-0.7.2\images\marker-shadow.png" />
+    <Content Include="GIS\libs\leaflet-0.7.2\leaflet-src.js" />
+    <Content Include="GIS\libs\leaflet-0.7.2\leaflet.css" />
+    <Content Include="GIS\libs\leaflet-0.7.2\leaflet.js" />
+    <Content Include="GIS\libs\leaflet-0.7.7\images\layers-2x.png" />
+    <Content Include="GIS\libs\leaflet-0.7.7\images\layers.png" />
+    <Content Include="GIS\libs\leaflet-0.7.7\images\marker-icon-2x.png" />
+    <Content Include="GIS\libs\leaflet-0.7.7\images\marker-icon.png" />
+    <Content Include="GIS\libs\leaflet-0.7.7\images\marker-shadow.png" />
+    <Content Include="GIS\libs\leaflet-0.7.7\leaflet-src.js" />
+    <Content Include="GIS\libs\leaflet-0.7.7\leaflet.css" />
+    <Content Include="GIS\libs\leaflet-0.7.7\leaflet.js" />
+    <Content Include="GIS\libs\leaflet-label\leaflet.label-src.js" />
+    <Content Include="GIS\libs\leaflet-label\leaflet.label.css" />
+    <Content Include="GIS\libs\leaflet-label\leaflet.label.js" />
+    <Content Include="GIS\libs\leaflet-minimap\Control.MiniMap-de.js" />
+    <Content Include="GIS\libs\leaflet-minimap\Control.MiniMap-ie.css" />
+    <Content Include="GIS\libs\leaflet-minimap\Control.MiniMap.css" />
+    <Content Include="GIS\libs\leaflet-minimap\Control.MiniMap.js" />
+    <Content Include="GIS\libs\leaflet-minimap\Control.MiniMap_.js" />
+    <Content Include="GIS\libs\leaflet-minimap\images\toggle.png" />
+    <Content Include="GIS\libs\leaflet.rotatedMarker\leaflet.rotatedMarker.js" />
+    <Content Include="GIS\libs\maplayer.adm.js" />
+    <Content Include="GIS\libs\maplayer.js" />
+    <Content Include="GIS\libs\maplayer.lib.js" />
+    <Content Include="GIS\libs\maps.aspx" />
+    <Content Include="GIS\libs\maptools.js" />
+    <Content Include="GIS\libs\mapui.adm.js" />
+    <Content Include="GIS\libs\mapui.js" />
+    <Content Include="GIS\libs\mapui.m.js" />
+    <Content Include="GIS\libs\mapui.prop.js" />
+    <Content Include="GIS\libs\mapunit.js" />
+    <Content Include="GIS\libs\msgbox\alert.png" />
+    <Content Include="GIS\libs\msgbox\confirm.png" />
+    <Content Include="GIS\libs\msgbox\error.png" />
+    <Content Include="GIS\libs\msgbox\info.png" />
+    <Content Include="GIS\libs\msgbox\jquery.msgBox.js" />
+    <Content Include="GIS\libs\msgbox\msgBoxBackGround.png" />
+    <Content Include="GIS\libs\msgbox\msgBoxLight.css" />
+    <Content Include="GIS\libs\PvScp.js" />
+    <Content Include="GIS\libs\PvScp2.js" />
+    <Content Include="GIS\libs\search.js" />
+    <Content Include="GIS\libs\style.adm.css" />
+    <Content Include="GIS\libs\style.css" />
+    <Content Include="GIS\libs\style.m.css" />
+    <Content Include="GIS\libs\style.prop.css" />
+    <Content Include="GIS\libs\tabs-no-images.css" />
+    <Content Include="GIS\libs\utm.js" />
+    <Content Include="GIS\libs\_arc\Bing.js" />
+    <Content Include="GIS\libs\_arc\cp.js" />
+    <Content Include="GIS\libs\_arc\dpv.js" />
+    <Content Include="GIS\libs\_arc\jquery.js" />
+    <Content Include="GIS\libs\_arc\jquery.tools.min.js" />
+    <Content Include="GIS\libs\_arc\layout.css" />
+    <Content Include="GIS\libs\_arc\maplayer.js" />
+    <Content Include="GIS\libs\_arc\maptools.js" />
+    <Content Include="GIS\libs\_arc\mapui.js" />
+    <Content Include="GIS\libs\_arc\mapunit.js" />
+    <Content Include="GIS\libs\_arc\PvScp.js" />
+    <Content Include="GIS\libs\_arc\style.css" />
+    <Content Include="GIS\libs\_arc\tabs-no-images.css" />
+    <Content Include="GIS\libs\_arc\utm.js" />
+    <Content Include="GIS\Log\upload\2014\01\25.txt" />
+    <Content Include="GIS\MapTest.aspx" />
+    <Content Include="GIS\WMS\gwc.aspx" />
+    <Content Include="GIS\WMS\tiles.aspx" />
+    <Content Include="GIS\_Inc\css\bootstrap-datepicker.css" />
+    <Content Include="GIS\_Inc\css\bootstrap-datetimepicker.css" />
+    <Content Include="GIS\_Inc\css\bootstrap-select.css" />
+    <Content Include="GIS\_Inc\css\bootstrap-touchspin.css" />
+    <Content Include="GIS\_Inc\css\bootstrap.css" />
+    <Content Include="GIS\_Inc\css\normalize.css" />
+    <Content Include="GIS\_Inc\css\reset.css" />
+    <Content Include="GIS\_Inc\css\responsive.css" />
+    <Content Include="GIS\_Inc\css\style_2.css" />
+    <Content Include="GIS\_Inc\css\style.css" />
+    <Content Include="GIS\_Inc\css\sweetalert2.css" />
+    <Content Include="GIS\_Inc\css\test.css" />
+    <Content Include="GIS\_Inc\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GIS\_Inc\font\generator_config.txt" />
+    <Content Include="GIS\_Inc\font\kanit-bold-demo.html" />
+    <Content Include="GIS\_Inc\font\kanit-bolditalic-demo.html" />
+    <Content Include="GIS\_Inc\font\kanit-italic-demo.html" />
+    <Content Include="GIS\_Inc\font\kanit-light-demo.html" />
+    <Content Include="GIS\_Inc\font\kanit-lightitalic-demo.html" />
+    <Content Include="GIS\_Inc\font\kanit-medium-demo.html" />
+    <Content Include="GIS\_Inc\font\kanit-mediumitalic-demo.html" />
+    <Content Include="GIS\_Inc\font\kanit-regular-demo.html" />
+    <Content Include="GIS\_Inc\font\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="GIS\_Inc\font\specimen_files\specimen_stylesheet.css" />
+    <Content Include="GIS\_Inc\font\style.css" />
+    <Content Include="GIS\_Inc\Ft.asp" />
+    <Content Include="GIS\_Inc\Hd.asp" />
+    <Content Include="GIS\_Inc\icon\fonts\afms.svg" />
+    <Content Include="GIS\_Inc\icon\style.css" />
+    <Content Include="GIS\_Inc\icon\svg\ic_3d.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_brightness.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_check_locationheight.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_close_tools.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_fullscreen.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_gotolocation.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_linear_elevation.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_location.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_measure_area.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_measure_areaheight.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_measure_circle.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_measure_circleheight.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_measure_distance.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_move.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_print.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_report.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_setting.svg" />
+    <Content Include="GIS\_Inc\icon\svg\ic_zoom.svg" />
+    <Content Include="GIS\_Inc\js\bluebird.min.js" />
+    <Content Include="GIS\_Inc\js\bootstrap-datepicker.js" />
+    <Content Include="GIS\_Inc\js\bootstrap-datetimepicker.js" />
+    <Content Include="GIS\_Inc\js\bootstrap-select.js" />
+    <Content Include="GIS\_Inc\js\bootstrap-touchspin.js" />
+    <Content Include="GIS\_Inc\js\bootstrap.js" />
+    <Content Include="GIS\_Inc\js\function.1.js" />
+    <Content Include="GIS\_Inc\js\jquery-3.2.0.min.js" />
+    <Content Include="GIS\_Inc\js\sweetalert2.js" />
+    <Content Include="GIS\_Inc\js\_bootstrap.js" />
+    <Content Include="GIS\_Inc\menu.asp" />
+    <Content Include="GIS\_Inc\Page.asp" />
+    <Content Include="GIS\_Inc\Style.css" />
+    <Content Include="GIS\_Inc\Title.asp" />
+    <Content Include="GIS\_Inc\_libs.1.asp" />
+    <Content Include="GIS\_Inc\_libs.adm.asp" />
+    <Content Include="GIS\_Inc\_libs.asp" />
+    <Content Include="GIS\_Inc\_libs.m.asp" />
+    <Content Include="GIS\_Inc\_libs.min.asp" />
+    <Content Include="GIS\_Inc\_libs.prop.asp" />
+    <Content Include="GPS\input.aspx" />
+    <Content Include="img\bg.png" />
+    <Content Include="img\logo%402x.png" />
+    <Content Include="img\logo_s.png" />
+    <Content Include="img\logo_sm.png" />
+    <Content Include="img\user.jpg" />
+    <Content Include="img\_logo.png" />
+    <Content Include="ISOForm\F04.aspx" />
+    <Content Include="ISOForm\css\style.css" />
+    <Content Include="ISOForm\css\style.js" />
+    <Content Include="ISOForm\F01.aspx" />
+    <Content Include="ISOForm\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ISOForm\iconfont\css\animation.css" />
+    <Content Include="ISOForm\iconfont\css\fontello-codes.css" />
+    <Content Include="ISOForm\iconfont\css\fontello-embedded.css" />
+    <Content Include="ISOForm\iconfont\css\fontello-ie7-codes.css" />
+    <Content Include="ISOForm\iconfont\css\fontello-ie7.css" />
+    <Content Include="ISOForm\iconfont\css\fontello.css" />
+    <Content Include="ISOForm\iconfont\demo.html" />
+    <Content Include="ISOForm\iconfont\font\fontello.svg" />
+    <Content Include="ISOForm\iconfont\LICENSE.txt" />
+    <Content Include="ISOForm\iconfont\README.txt" />
+    <Content Include="ISOForm\img\checked.svg" />
+    <Content Include="ISOForm\img\logo.png" />
+    <Content Include="ISOForm\webfont\thsarabunnew.css" />
+    <Content Include="LIB#\itextsharp.dll" />
+    <Content Include="PlugIn\AnyDesk.aspx" />
+    <Content Include="PlugIn\FileManager.aspx" />
+    <Content Include="Service\Talonnet\Delete.aspx" />
+    <Content Include="Service\Talonnet\GETStat.aspx" />
+    <Content Include="_Inc\css\bootstrap-timepicker.css" />
+    <Content Include="_Inc\js\bootstrap-timepicker.js" />
+    <Content Include="_Inc\js\jquery.fileDownload.js" />
+    <Content Include="Print\PrintPage.aspx" />
+    <Content Include="REC\Cont.aspx" />
+    <Content Include="Service\DMS.asmx" />
+    <Content Include="Service\Remote\Default.aspx" />
+    <Content Include="Service\Talonnet\Download.aspx" />
+    <Content Include="Service\Talonnet\GETListDet.aspx" />
+    <Content Include="Service\Talonnet\GETList.aspx" />
+    <Content Include="UR\OTPPwd.aspx" />
+    <Content Include="UR\ResetPwd.aspx" />
+    <Content Include="UR\uToken.aspx" />
+    <Content Include="_Inc.A\css\bootstrap-datepicker.css" />
+    <Content Include="_Inc.A\css\bootstrap-fileinput.css" />
+    <Content Include="_Inc.A\css\bootstrap-select.css" />
+    <Content Include="_Inc.A\css\bootstrap.min.css" />
+    <Content Include="_Inc.A\css\hover.css" />
+    <Content Include="_Inc.A\css\jstree.css" />
+    <Content Include="_Inc.A\css\lightgallery.css" />
+    <Content Include="_Inc.A\css\reset.css" />
+    <Content Include="_Inc.A\css\responsive.css" />
+    <Content Include="_Inc.A\css\style.css" />
+    <Content Include="_Inc.A\css\stylexx.css" />
+    <Content Include="_Inc.A\css\sweetalert2.css" />
+    <Content Include="_Inc.A\css\throbber.gif" />
+    <Content Include="_Inc.A\font\generator_config.txt" />
+    <Content Include="_Inc.A\font\kanit-bold-demo.html" />
+    <Content Include="_Inc.A\font\kanit-bolditalic-demo.html" />
+    <Content Include="_Inc.A\font\kanit-italic-demo.html" />
+    <Content Include="_Inc.A\font\kanit-light-demo.html" />
+    <Content Include="_Inc.A\font\kanit-lightitalic-demo.html" />
+    <Content Include="_Inc.A\font\kanit-medium-demo.html" />
+    <Content Include="_Inc.A\font\kanit-mediumitalic-demo.html" />
+    <Content Include="_Inc.A\font\kanit-regular-demo.html" />
+    <Content Include="_Inc.A\font\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="_Inc.A\font\specimen_files\specimen_stylesheet.css" />
+    <Content Include="_Inc.A\font\style.css" />
+    <Content Include="_Inc.A\icon\fonts\nbtc.svg" />
+    <Content Include="_Inc.A\icon\style.css" />
+    <Content Include="_Inc.A\img\ic_folder.svg" />
+    <Content Include="_Inc.A\img\ic_folder_color.svg" />
+    <Content Include="_Inc.A\img\jstree.png" />
+    <Content Include="_Inc.A\js\autosize.js" />
+    <Content Include="_Inc.A\js\bootstrap-datepicker.js" />
+    <Content Include="_Inc.A\js\bootstrap-fileinput.js" />
+    <Content Include="_Inc.A\js\bootstrap-inputmask.js" />
+    <Content Include="_Inc.A\js\bootstrap-select.js" />
+    <Content Include="_Inc.A\js\bootstrap.min.js" />
+    <Content Include="_Inc.A\js\core.js" />
+    <Content Include="_Inc.A\js\function.js" />
+    <Content Include="_Inc.A\js\jquery-3.2.0.min.js" />
+    <Content Include="_Inc.A\js\jquery.validation.js" />
+    <Content Include="_Inc.A\js\jstree.min.js" />
+    <Content Include="_Inc.A\js\lg-autoplay.js" />
+    <Content Include="_Inc.A\js\lg-autoplay.min.js" />
+    <Content Include="_Inc.A\js\lg-fullscreen.js" />
+    <Content Include="_Inc.A\js\lg-fullscreen.min.js" />
+    <Content Include="_Inc.A\js\lg-hash.js" />
+    <Content Include="_Inc.A\js\lg-hash.min.js" />
+    <Content Include="_Inc.A\js\lg-pager.js" />
+    <Content Include="_Inc.A\js\lg-pager.min.js" />
+    <Content Include="_Inc.A\js\lg-share.js" />
+    <Content Include="_Inc.A\js\lg-share.min.js" />
+    <Content Include="_Inc.A\js\lg-thumbnail.js" />
+    <Content Include="_Inc.A\js\lg-thumbnail.min.js" />
+    <Content Include="_Inc.A\js\lg-video.js" />
+    <Content Include="_Inc.A\js\lg-video.min.js" />
+    <Content Include="_Inc.A\js\lg-zoom.js" />
+    <Content Include="_Inc.A\js\lg-zoom.min.js" />
+    <Content Include="_Inc.A\js\lightgallery.js" />
+    <Content Include="_Inc.A\js\sweetalert2.js" />
+    <Content Include="_Inc.A\video\video.mp4" />
+    <Content Include="img\banner-bg.jpg" />
+    <Content Include="img\header-bg.jpg" />
+    <Content Include="img\ic_folder.svg" />
+    <Content Include="img\ic_folder_color.svg" />
+    <Content Include="img\jstree.png" />
+    <Content Include="img\logo-kbank.png" />
+    <Content Include="img\logo-scb.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\sampleimg.png" />
+    <Content Include="img\user.png" />
+    <Content Include="LIB#\CsQuery.dll" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="UR\Act.aspx" />
+    <Content Include="UR\ChgPwd.aspx" />
+    <Content Include="UR\css\responsive.css" />
+    <Content Include="UR\css\style.css" />
+    <Content Include="UR\DivSch.aspx" />
+    <Content Include="UR\FgtPwd.aspx" />
+    <Content Include="UR\FgtQ.aspx" />
+    <Content Include="UR\img\bg.jpg" />
+    <Content Include="UR\img\logo.png" />
+    <Content Include="UR\js\classie.js" />
+    <Content Include="UR\Login.aspx" />
+    <Content Include="UR\Logout.aspx" />
+    <Content Include="UR\NoReg.aspx" />
+    <Content Include="UR\Reg.aspx" />
+    <Content Include="UR\_Page.asp" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_Inc\css\fm-style.css" />
+    <Content Include="_Inc\css\jstree.css" />
+    <Content Include="_Inc\css\lightgallery.css" />
+    <Content Include="_Inc\css\style.css" />
+    <Content Include="_Inc\css\style.v1.css" />
+    <Content Include="_Inc\css\stylex.css" />
+    <Content Include="_Inc\css\throbber.gif" />
+    <Content Include="_Inc\Hd.asp" />
+    <Content Include="_Inc\js\bluebird.min.js" />
+    <Content Include="_Inc\js\bootstrap.min.js" />
+    <Content Include="_Inc\js\checkSession.js" />
+    <Content Include="_Inc\js\core.js" />
+    <Content Include="_Inc\js\dpv2.js" />
+    <Content Include="_Inc\js\function.cop.js" />
+    <Content Include="_Inc\js\lightgallery.js" />
+    <Content Include="_Inc\js\PvScp2.js" />
+    <Content Include="_Inc\Test3.htm" />
+    <Content Include="_Inc\Title.Plug.asp" />
+    <Content Include="_Inc\Title.B.asp" />
+    <Content Include="_Inc\_Title.asp" />
+    <Content Include="_Inc\css\bootstrap-datepicker.css" />
+    <Content Include="_Inc\css\bootstrap-datetimepicker.css" />
+    <Content Include="_Inc\css\bootstrap-select.css" />
+    <Content Include="_Inc\css\bootstrap-touchspin.css" />
+    <Content Include="_Inc\css\bootstrap.css" />
+    <Content Include="_Inc\css\normalize.css" />
+    <Content Include="_Inc\css\reset.css" />
+    <Content Include="_Inc\css\responsive.css" />
+    <Content Include="_Inc\css\style.d.css" />
+    <Content Include="_Inc\css\sweetalert2.css" />
+    <Content Include="_Inc\css\test.css" />
+    <Content Include="_Inc\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="_Inc\font\generator_config.txt" />
+    <Content Include="_Inc\font\kanit-bold-demo.html" />
+    <Content Include="_Inc\font\kanit-bolditalic-demo.html" />
+    <Content Include="_Inc\font\kanit-italic-demo.html" />
+    <Content Include="_Inc\font\kanit-light-demo.html" />
+    <Content Include="_Inc\font\kanit-lightitalic-demo.html" />
+    <Content Include="_Inc\font\kanit-medium-demo.html" />
+    <Content Include="_Inc\font\kanit-mediumitalic-demo.html" />
+    <Content Include="_Inc\font\kanit-regular-demo.html" />
+    <Content Include="_Inc\font\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="_Inc\font\specimen_files\specimen_stylesheet.css" />
+    <Content Include="_Inc\font\style.css" />
+    <Content Include="_Inc\Ft.A.asp" />
+    <Content Include="_Inc\Ft.asp" />
+    <Content Include="_Inc\Ft.P.asp" />
+    <Content Include="_Inc\Hd.A.asp" />
+    <Content Include="_Inc\icon\fonts\afms.svg" />
+    <Content Include="_Inc\icon\style.css" />
+    <Content Include="_Inc\icon\svg\ic_3d.svg" />
+    <Content Include="_Inc\icon\svg\ic_brightness.svg" />
+    <Content Include="_Inc\icon\svg\ic_check_locationheight.svg" />
+    <Content Include="_Inc\icon\svg\ic_close_tools.svg" />
+    <Content Include="_Inc\icon\svg\ic_fullscreen.svg" />
+    <Content Include="_Inc\icon\svg\ic_gotolocation.svg" />
+    <Content Include="_Inc\icon\svg\ic_linear_elevation.svg" />
+    <Content Include="_Inc\icon\svg\ic_location.svg" />
+    <Content Include="_Inc\icon\svg\ic_measure_area.svg" />
+    <Content Include="_Inc\icon\svg\ic_measure_areaheight.svg" />
+    <Content Include="_Inc\icon\svg\ic_measure_circle.svg" />
+    <Content Include="_Inc\icon\svg\ic_measure_circleheight.svg" />
+    <Content Include="_Inc\icon\svg\ic_measure_distance.svg" />
+    <Content Include="_Inc\icon\svg\ic_move.svg" />
+    <Content Include="_Inc\icon\svg\ic_print.svg" />
+    <Content Include="_Inc\icon\svg\ic_report.svg" />
+    <Content Include="_Inc\icon\svg\ic_setting.svg" />
+    <Content Include="_Inc\icon\svg\ic_zoom.svg" />
+    <Content Include="_Inc\js\bootstrap-datepicker.js" />
+    <Content Include="_Inc\js\bootstrap-datetimepicker.js" />
+    <Content Include="_Inc\js\bootstrap-select.js" />
+    <Content Include="_Inc\js\bootstrap-touchspin.js" />
+    <Content Include="_Inc\js\bootstrap.js" />
+    <Content Include="_Inc\js\function.js" />
+    <Content Include="_Inc\js\jquery-3.2.0.min.js" />
+    <Content Include="_Inc\js\sweetalert2.js" />
+    <Content Include="_Inc\js\_bootstrap.js" />
+    <Content Include="_Inc\Page.asp" />
+    <Content Include="_Inc\Title.A.asp" />
+    <Content Include="_Inc\Title.asp" />
+    <Content Include="_Inc\Usr.asp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\BData.aspx.cs">
+      <DependentUpon>BData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BData.aspx.designer.cs">
+      <DependentUpon>BData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BDataAdd.aspx.cs">
+      <DependentUpon>BDataAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BDataAdd.aspx.designer.cs">
+      <DependentUpon>BDataAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CGrp.aspx.cs">
+      <DependentUpon>CGrp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CGrp.aspx.designer.cs">
+      <DependentUpon>CGrp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CGrpAdd.aspx.cs">
+      <DependentUpon>CGrpAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CGrpAdd.aspx.designer.cs">
+      <DependentUpon>CGrpAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CLoadTpl.aspx.cs">
+      <DependentUpon>CLoadTpl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CLoadTpl.aspx.designer.cs">
+      <DependentUpon>CLoadTpl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CFieldT.aspx.cs">
+      <DependentUpon>CFieldT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CFieldT.aspx.designer.cs">
+      <DependentUpon>CFieldT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Domain.aspx.cs">
+      <DependentUpon>Domain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Domain.aspx.designer.cs">
+      <DependentUpon>Domain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DomainAdd.aspx.cs">
+      <DependentUpon>DomainAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DomainAdd.aspx.designer.cs">
+      <DependentUpon>DomainAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EquipAdd.aspx.cs">
+      <DependentUpon>EquipAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EquipAdd.aspx.designer.cs">
+      <DependentUpon>EquipAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\data\dPoiDet.ashx.cs">
+      <DependentUpon>dPoiDet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Equip.aspx.cs">
+      <DependentUpon>Equip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Equip.aspx.designer.cs">
+      <DependentUpon>Equip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CTmplAdd.aspx.cs">
+      <DependentUpon>CTmplAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CTmplAdd.aspx.designer.cs">
+      <DependentUpon>CTmplAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CTmpl.aspx.cs">
+      <DependentUpon>CTmpl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CTmpl.aspx.designer.cs">
+      <DependentUpon>CTmpl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CSaveTpl.aspx.cs">
+      <DependentUpon>CSaveTpl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CSaveTpl.aspx.designer.cs">
+      <DependentUpon>CSaveTpl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CTypeAdd.aspx.cs">
+      <DependentUpon>CTypeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CTypeAdd.aspx.designer.cs">
+      <DependentUpon>CTypeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CType.aspx.cs">
+      <DependentUpon>CType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CType.aspx.designer.cs">
+      <DependentUpon>CType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CField.aspx.cs">
+      <DependentUpon>CField.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CField.aspx.designer.cs">
+      <DependentUpon>CField.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GISLayerAdd.aspx.cs">
+      <DependentUpon>GISLayerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GISLayerAdd.aspx.designer.cs">
+      <DependentUpon>GISLayerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GISLayer.aspx.cs">
+      <DependentUpon>GISLayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GISLayer.aspx.designer.cs">
+      <DependentUpon>GISLayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LayerAdd.aspx.cs">
+      <DependentUpon>LayerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LayerAdd.aspx.designer.cs">
+      <DependentUpon>LayerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Layer.aspx.cs">
+      <DependentUpon>Layer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Layer.aspx.designer.cs">
+      <DependentUpon>Layer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\data\DelItem.ashx.cs">
+      <DependentUpon>DelItem.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Download.aspx.designer.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DownloadAdd.aspx.cs">
+      <DependentUpon>DownloadAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DownloadAdd.aspx.designer.cs">
+      <DependentUpon>DownloadAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LIB\Comm.cs" />
+    <Compile Include="Admin\LIB\cRc4.cs" />
+    <Compile Include="Admin\LIB\cText.cs" />
+    <Compile Include="Admin\LIB\JSTree.cs" />
+    <Compile Include="Admin\Org.aspx.cs">
+      <DependentUpon>Org.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Org.aspx.designer.cs">
+      <DependentUpon>Org.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrgAdd.aspx.cs">
+      <DependentUpon>OrgAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrgAdd.aspx.designer.cs">
+      <DependentUpon>OrgAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrgVer.aspx.cs">
+      <DependentUpon>OrgVer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrgVer.aspx.designer.cs">
+      <DependentUpon>OrgVer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrgVerAdd.aspx.cs">
+      <DependentUpon>OrgVerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrgVerAdd.aspx.designer.cs">
+      <DependentUpon>OrgVerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UGrp.aspx.cs">
+      <DependentUpon>UGrp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UGrp.aspx.designer.cs">
+      <DependentUpon>UGrp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UGrpAdd.aspx.cs">
+      <DependentUpon>UGrpAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UGrpAdd.aspx.designer.cs">
+      <DependentUpon>UGrpAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Usr.aspx.cs">
+      <DependentUpon>Usr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Usr.aspx.designer.cs">
+      <DependentUpon>Usr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UsrAdd.aspx.cs">
+      <DependentUpon>UsrAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UsrAdd.aspx.designer.cs">
+      <DependentUpon>UsrAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BI\FreqStat.aspx.cs">
+      <DependentUpon>FreqStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BI\FreqStat.aspx.designer.cs">
+      <DependentUpon>FreqStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashB\Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashB\Download.aspx.designer.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashB\data\dSensor.ashx.cs">
+      <DependentUpon>dSensor.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DashB\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashB\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnChkFq.aspx.cs">
+      <DependentUpon>AnChkFq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnChkFq.aspx.designer.cs">
+      <DependentUpon>AnChkFq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnChk.aspx.cs">
+      <DependentUpon>AnChk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnChk.aspx.designer.cs">
+      <DependentUpon>AnChk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnEvent.aspx.cs">
+      <DependentUpon>AnEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnEvent.aspx.designer.cs">
+      <DependentUpon>AnEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnFStr.aspx.cs">
+      <DependentUpon>AnFStr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnFStr.aspx.designer.cs">
+      <DependentUpon>AnFStr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnInfo.aspx.cs">
+      <DependentUpon>AnInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnInfo.aspx.designer.cs">
+      <DependentUpon>AnInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnOcc.aspx.cs">
+      <DependentUpon>AnOcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnOcc.aspx.designer.cs">
+      <DependentUpon>AnOcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnRep.aspx.cs">
+      <DependentUpon>AnRep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnRep.aspx.designer.cs">
+      <DependentUpon>AnRep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnInfoEdit.aspx.cs">
+      <DependentUpon>AnInfoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnInfoEdit.aspx.designer.cs">
+      <DependentUpon>AnInfoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\FreqStatMap.aspx.cs">
+      <DependentUpon>FreqStatMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\FreqStatMap.aspx.designer.cs">
+      <DependentUpon>FreqStatMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\FreqStatChart.aspx.cs">
+      <DependentUpon>FreqStatChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\FreqStatChart.aspx.designer.cs">
+      <DependentUpon>FreqStatChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\FreqStat.aspx.cs">
+      <DependentUpon>FreqStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\FreqStat.aspx.designer.cs">
+      <DependentUpon>FreqStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\data\DelItem.ashx.cs">
+      <DependentUpon>DelItem.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\mFreqTB.aspx.cs">
+      <DependentUpon>mFreqTB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\mFreqTB.aspx.designer.cs">
+      <DependentUpon>mFreqTB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\FreqTB.aspx.cs">
+      <DependentUpon>FreqTB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\FreqTB.aspx.designer.cs">
+      <DependentUpon>FreqTB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\DImpLog.aspx.cs">
+      <DependentUpon>DImpLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\DImpLog.aspx.designer.cs">
+      <DependentUpon>DImpLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\AnInfoEdit.aspx.cs">
+      <DependentUpon>AnInfoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\AnInfoEdit.aspx.designer.cs">
+      <DependentUpon>AnInfoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\Audio2.aspx.cs">
+      <DependentUpon>Audio2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\Audio2.aspx.designer.cs">
+      <DependentUpon>Audio2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\cReset.ashx.cs">
+      <DependentUpon>cReset.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dFStn.ashx.cs">
+      <DependentUpon>dFStn.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\AImp.aspx.cs">
+      <DependentUpon>AImp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\AImp.aspx.designer.cs">
+      <DependentUpon>AImp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dScanLoc.ashx.cs">
+      <DependentUpon>dScanLoc.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\Download.aspx.designer.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\FMon0.aspx.cs">
+      <DependentUpon>FMon0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\FMon0.aspx.designer.cs">
+      <DependentUpon>FMon0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\FMon2File.aspx.cs">
+      <DependentUpon>FMon2File.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\FMon2File.aspx.designer.cs">
+      <DependentUpon>FMon2File.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\FMon2.aspx.cs">
+      <DependentUpon>FMon2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\FMon2.aspx.designer.cs">
+      <DependentUpon>FMon2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\HSchDialog.aspx.cs">
+      <DependentUpon>HSchDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\HSchDialog.aspx.designer.cs">
+      <DependentUpon>HSchDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\VFCols.cs" />
+    <Compile Include="DMS\data\dScanData.ashx.cs">
+      <DependentUpon>dScanData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\DImp.aspx.cs">
+      <DependentUpon>DImp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\DImp.aspx.designer.cs">
+      <DependentUpon>DImp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\AnRepDet.aspx.cs">
+      <DependentUpon>AnRepDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\AnRepDet.aspx.designer.cs">
+      <DependentUpon>AnRepDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\PrintChart.aspx.cs">
+      <DependentUpon>PrintChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\PrintChart.aspx.designer.cs">
+      <DependentUpon>PrintChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\PrintOcc.aspx.cs">
+      <DependentUpon>PrintOcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\PrintOcc.aspx.designer.cs">
+      <DependentUpon>PrintOcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\AnInfo.aspx.cs">
+      <DependentUpon>AnInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\AnInfo.aspx.designer.cs">
+      <DependentUpon>AnInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\AnChk.aspx.cs">
+      <DependentUpon>AnChk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\AnChk.aspx.designer.cs">
+      <DependentUpon>AnChk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\AnSMon.aspx.cs">
+      <DependentUpon>AnSMon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\AnSMon.aspx.designer.cs">
+      <DependentUpon>AnSMon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\AnOcc.aspx.cs">
+      <DependentUpon>AnOcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\AnOcc.aspx.designer.cs">
+      <DependentUpon>AnOcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\AnEvent.aspx.cs">
+      <DependentUpon>AnEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\AnEvent.aspx.designer.cs">
+      <DependentUpon>AnEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\AnFStr.aspx.cs">
+      <DependentUpon>AnFStr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\AnFStr.aspx.designer.cs">
+      <DependentUpon>AnFStr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\Audio.aspx.cs">
+      <DependentUpon>Audio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\Audio.aspx.designer.cs">
+      <DependentUpon>Audio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dScanCancel.ashx.cs">
+      <DependentUpon>dScanCancel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dScanExists.ashx.cs">
+      <DependentUpon>dScanExists.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dScanSchd.ashx.cs">
+      <DependentUpon>dScanSchd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dScanTable.ashx.cs">
+      <DependentUpon>dScanTable.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\mFDBStn.aspx.cs">
+      <DependentUpon>mFDBStn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\mFDBStn.aspx.designer.cs">
+      <DependentUpon>mFDBStn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\PlayRec3.aspx.cs">
+      <DependentUpon>PlayRec3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\PlayRec3.aspx.designer.cs">
+      <DependentUpon>PlayRec3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\PlayRec2.aspx.cs">
+      <DependentUpon>PlayRec2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\PlayRec2.aspx.designer.cs">
+      <DependentUpon>PlayRec2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dAudioF.ashx.cs">
+      <DependentUpon>dAudioF.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dInfo.ashx.cs">
+      <DependentUpon>dInfo.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FMS\data\dScanData.ashx.cs">
+      <DependentUpon>dScanData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dScanCheck.ashx.cs">
+      <DependentUpon>dScanCheck.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dHDet.ashx.cs">
+      <DependentUpon>dHDet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\dScanBegin.ashx.cs">
+      <DependentUpon>dScanBegin.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\FDet.aspx.cs">
+      <DependentUpon>FDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\FDet.aspx.designer.cs">
+      <DependentUpon>FDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMS\Conf.aspx.cs">
+      <DependentUpon>Conf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMS\Conf.aspx.designer.cs">
+      <DependentUpon>Conf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\data\DelItem.ashx.cs">
+      <DependentUpon>DelItem.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\HDet.aspx.cs">
+      <DependentUpon>HDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\HDet.aspx.designer.cs">
+      <DependentUpon>HDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\FUAdd.aspx.cs">
+      <DependentUpon>FUAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\FUAdd.aspx.designer.cs">
+      <DependentUpon>FUAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\__HAdd.aspx.cs">
+      <DependentUpon>__HAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\__HAdd.aspx.designer.cs">
+      <DependentUpon>__HAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\HSch.aspx.cs">
+      <DependentUpon>HSch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\HSch.aspx.designer.cs">
+      <DependentUpon>HSch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\__FAdd.aspx.cs">
+      <DependentUpon>__FAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\__FAdd.aspx.designer.cs">
+      <DependentUpon>__FAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\FSch.aspx.cs">
+      <DependentUpon>FSch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\FSch.aspx.designer.cs">
+      <DependentUpon>FSch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\FMon.aspx.cs">
+      <DependentUpon>FMon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\FMon.aspx.designer.cs">
+      <DependentUpon>FMon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\PlayRec.aspx.cs">
+      <DependentUpon>PlayRec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\PlayRec.aspx.designer.cs">
+      <DependentUpon>PlayRec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMS\PrintOcc.aspx.cs">
+      <DependentUpon>PrintOcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMS\PrintOcc.aspx.designer.cs">
+      <DependentUpon>PrintOcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS2\Cop.aspx.cs">
+      <DependentUpon>Cop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS2\Cop.aspx.designer.cs">
+      <DependentUpon>Cop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\Cop.aspx.cs">
+      <DependentUpon>Cop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\Cop.aspx.designer.cs">
+      <DependentUpon>Cop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\Copy of Cop.aspx.cs">
+      <DependentUpon>Copy of Cop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\Copy of Cop.aspx.designer.cs">
+      <DependentUpon>Copy of Cop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\addpoi.aspx.cs">
+      <DependentUpon>addpoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\data\addpoi.aspx.designer.cs">
+      <DependentUpon>addpoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dEquip2.ashx.cs">
+      <DependentUpon>dEquip2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dHisSch.ashx.cs">
+      <DependentUpon>dHisSch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dEquip.ashx.cs">
+      <DependentUpon>dEquip.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dBoundInfo.ashx.cs">
+      <DependentUpon>dBoundInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dBoundPnts.ashx.cs">
+      <DependentUpon>dBoundPnts.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dDeep.ashx.cs">
+      <DependentUpon>dDeep.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dEvent.ashx.cs">
+      <DependentUpon>dEvent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dGISDef.ashx.cs">
+      <DependentUpon>dGISDef.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dGISLayer.ashx.cs">
+      <DependentUpon>dGISLayer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dGPSBckSch.ashx.cs">
+      <DependentUpon>dGPSBckSch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dLandSch.ashx.cs">
+      <DependentUpon>dLandSch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dLandSchL.ashx.cs">
+      <DependentUpon>dLandSchL.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dLandUse.ashx.cs">
+      <DependentUpon>dLandUse.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dLayer.ashx.cs">
+      <DependentUpon>dLayer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dLOS.ashx.cs">
+      <DependentUpon>dLOS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPBckList.ashx.cs">
+      <DependentUpon>dPBckList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPBckSch.ashx.cs">
+      <DependentUpon>dPBckSch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiDel.ashx.cs">
+      <DependentUpon>dPoiDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiDet.ashx.cs">
+      <DependentUpon>dPoiDet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiGet.ashx.cs">
+      <DependentUpon>dPoiGet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiGets.ashx.cs">
+      <DependentUpon>dPoiGets.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiGPSDet.ashx.cs">
+      <DependentUpon>dPoiGPSDet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiGPSHis.ashx.cs">
+      <DependentUpon>dPoiGPSHis.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiLyGets.ashx.cs">
+      <DependentUpon>dPoiLyGets.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GIS\data\dPoiPos.ashx.cs">
+      <DependentUpon>dPoiPos.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiSch.ashx.cs">
+      <DependentUpon>dPoiSch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPOISchG.ashx.cs">
+      <DependentUpon>dPOISchG.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiStat.ashx.cs">
+      <DependentUpon>dPoiStat.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dPoiType.ashx.cs">
+      <DependentUpon>dPoiType.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\dRoute.ashx.cs">
+      <DependentUpon>dRoute.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\gDirection.ashx.cs">
+      <DependentUpon>gDirection.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\gGeocode.ashx.cs">
+      <DependentUpon>gGeocode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\gpDirection.ashx.cs">
+      <DependentUpon>gpDirection.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\gpGeocode.ashx.cs">
+      <DependentUpon>gpGeocode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\gProv.ashx.cs">
+      <DependentUpon>gProv.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\iALT.ashx.cs">
+      <DependentUpon>iALT.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\iAOS.ashx.cs">
+      <DependentUpon>iAOS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\iDeep.ashx.cs">
+      <DependentUpon>iDeep.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\iHST.ashx.cs">
+      <DependentUpon>iHST.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\iLOS.ashx.cs">
+      <DependentUpon>iLOS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\data\uToken.ashx.cs">
+      <DependentUpon>uToken.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\EMap.aspx.cs">
+      <DependentUpon>EMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\EMap.aspx.designer.cs">
+      <DependentUpon>EMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\ExportPOI.aspx.cs">
+      <DependentUpon>ExportPOI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\ExportPOI.aspx.designer.cs">
+      <DependentUpon>ExportPOI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\Kmz\Export.aspx.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\Kmz\Export.aspx.designer.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\libs\maps.aspx.cs">
+      <DependentUpon>maps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\libs\maps.aspx.designer.cs">
+      <DependentUpon>maps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\Print_map.aspx.cs">
+      <DependentUpon>Print_map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\Print_map.aspx.designer.cs">
+      <DependentUpon>Print_map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\WMS\gwc.aspx.cs">
+      <DependentUpon>gwc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\WMS\gwc.aspx.designer.cs">
+      <DependentUpon>gwc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS\WMS\tiles.aspx.cs">
+      <DependentUpon>tiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS\WMS\tiles.aspx.designer.cs">
+      <DependentUpon>tiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GPS\area.ashx.cs">
+      <DependentUpon>area.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ISOForm\F04.aspx.cs">
+      <DependentUpon>F04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ISOForm\F04.aspx.designer.cs">
+      <DependentUpon>F04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ISOForm\F01.aspx.cs">
+      <DependentUpon>F01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ISOForm\F01.aspx.designer.cs">
+      <DependentUpon>F01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LIB#\BahtText.cs" />
+    <Compile Include="LIB#\cConvert.cs" />
+    <Compile Include="LIB#\cMath.cs" />
+    <Compile Include="LIB#\Comm.cs" />
+    <Compile Include="LIB#\cOnline.cs" />
+    <Compile Include="LIB#\cRc4.cs" />
+    <Compile Include="LIB#\cText.cs" />
+    <Compile Include="LIB#\cUsr.cs" />
+    <Compile Include="LIB#\cUtils.cs" />
+    <Compile Include="LIB#\DefCL.cs" />
+    <Compile Include="LIB#\DT2.cs" />
+    <Compile Include="LIB#\Excel.cs" />
+    <Compile Include="LIB#\Export.cs" />
+    <Compile Include="LIB#\GenericListDataReader.cs" />
+    <Compile Include="LIB#\Gmail.cs" />
+    <Compile Include="LIB#\GoogleTileUtils.cs" />
+    <Compile Include="LIB#\MDataDC.cs" />
+    <Compile Include="LIB#\MData.cs" />
+    <Compile Include="LIB#\PDF.cs" />
+    <Compile Include="LIB#\POISet.cs" />
+    <Compile Include="LIB#\UTM.cs" />
+    <Compile Include="Mango\relay.ashx.cs">
+      <DependentUpon>relay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\AnyDesk.aspx.cs">
+      <DependentUpon>AnyDesk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlugIn\AnyDesk.aspx.designer.cs">
+      <DependentUpon>AnyDesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\cAttn.ashx.cs">
+      <DependentUpon>cAttn.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\dEquip.ashx.cs">
+      <DependentUpon>dEquip.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\cReset.ashx.cs">
+      <DependentUpon>cReset.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\Delete.ashx.cs">
+      <DependentUpon>Delete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\FtpStat.ashx.cs">
+      <DependentUpon>FtpStat.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\Upload.ashx.cs">
+      <DependentUpon>Upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\Download.ashx.cs">
+      <DependentUpon>Download.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\dSensor.ashx.cs">
+      <DependentUpon>dSensor.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\FileManager.aspx.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIn\FileManager.aspx.designer.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print\PrintPage.aspx.cs">
+      <DependentUpon>PrintPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print\PrintPage.aspx.designer.cs">
+      <DependentUpon>PrintPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REC\Cont.aspx.cs">
+      <DependentUpon>Cont.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REC\Cont.aspx.designer.cs">
+      <DependentUpon>Cont.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\DMS.asmx.cs">
+      <DependentUpon>DMS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Talonnet\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\Talonnet\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Talonnet\GETStat.aspx.cs">
+      <DependentUpon>GETStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\Talonnet\GETStat.aspx.designer.cs">
+      <DependentUpon>GETStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Talonnet\Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Talonnet\Download.aspx.designer.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Talonnet\GETListDet.aspx.cs">
+      <DependentUpon>GETListDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\Talonnet\GETListDet.aspx.designer.cs">
+      <DependentUpon>GETListDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Talonnet\GETList.aspx.cs">
+      <DependentUpon>GETList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\Talonnet\GETList.aspx.designer.cs">
+      <DependentUpon>GETList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\Act.aspx.cs">
+      <DependentUpon>Act.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\Act.aspx.designer.cs">
+      <DependentUpon>Act.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\ChgPwd.aspx.cs">
+      <DependentUpon>ChgPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\ChgPwd.aspx.designer.cs">
+      <DependentUpon>ChgPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\OTPPwd.aspx.cs">
+      <DependentUpon>OTPPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\OTPPwd.aspx.designer.cs">
+      <DependentUpon>OTPPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\ResetPwd.aspx.cs">
+      <DependentUpon>ResetPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\ResetPwd.aspx.designer.cs">
+      <DependentUpon>ResetPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\DivSch.aspx.cs">
+      <DependentUpon>DivSch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\DivSch.aspx.designer.cs">
+      <DependentUpon>DivSch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\FgtPwd.aspx.cs">
+      <DependentUpon>FgtPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\FgtPwd.aspx.designer.cs">
+      <DependentUpon>FgtPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\FgtQ.aspx.cs">
+      <DependentUpon>FgtQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\FgtQ.aspx.designer.cs">
+      <DependentUpon>FgtQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\NoReg.aspx.cs">
+      <DependentUpon>NoReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\NoReg.aspx.designer.cs">
+      <DependentUpon>NoReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UR\Reg.aspx.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UR\Reg.aspx.designer.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FMS\js\" />
+    <Folder Include="ISOForm\js\" />
+    <Folder Include="Service\AFM1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\data\DelItem.ashx" />
+    <Content Include="Admin\data\dPoiDet.ashx" />
+    <Content Include="GIS\data\dBoundInfo.ashx" />
+    <Content Include="GIS\data\dBoundPnts.ashx" />
+    <Content Include="GIS\data\dDeep.ashx" />
+    <Content Include="GIS\data\dEvent.ashx" />
+    <Content Include="GIS\data\dGISDef.ashx" />
+    <Content Include="GIS\data\dGISLayer.ashx" />
+    <Content Include="GIS\data\dGPSBckSch.ashx" />
+    <Content Include="GIS\data\dLandSch.ashx" />
+    <Content Include="GIS\data\dLandSchL.ashx" />
+    <Content Include="GIS\data\dLandUse.ashx" />
+    <Content Include="GIS\data\dLayer.ashx" />
+    <Content Include="GIS\data\dLOS.ashx" />
+    <Content Include="GIS\data\dPBckList.ashx" />
+    <Content Include="GIS\data\dPBckSch.ashx" />
+    <Content Include="GIS\data\dPoiDel.ashx" />
+    <Content Include="GIS\data\dPoiDet.ashx" />
+    <Content Include="GIS\data\dPoiGet.ashx" />
+    <Content Include="GIS\data\dPoiGets.ashx" />
+    <Content Include="GIS\data\dPoiGPSDet.ashx" />
+    <Content Include="GIS\data\dPoiGPSHis.ashx" />
+    <Content Include="GIS\data\dPoiPos.ashx" />
+    <Content Include="GIS\data\dPoiSch.ashx" />
+    <Content Include="GIS\data\dPOISchG.ashx" />
+    <Content Include="GIS\data\dPoiStat.ashx" />
+    <Content Include="GIS\data\dPoiType.ashx" />
+    <Content Include="GIS\data\gProv.ashx" />
+    <Content Include="GIS\data\iALT.ashx" />
+    <Content Include="GIS\data\iAOS.ashx" />
+    <Content Include="GIS\data\iDeep.ashx" />
+    <Content Include="GIS\data\iHST.ashx" />
+    <Content Include="GIS\data\iLOS.ashx" />
+    <Content Include="GIS\data\uToken.ashx" />
+    <Content Include="GIS\images\Themes.zip" />
+    <Content Include="GIS\data\dEquip.ashx" />
+    <Content Include="GIS\data\dHisSch.ashx" />
+    <Content Include="FMS\data\DelItem.ashx" />
+    <Content Include="FMS\data\dHDet.ashx" />
+    <Content Include="GIS\data\gDirection.ashx" />
+    <Content Include="GIS\data\gGeocode.ashx" />
+    <Content Include="GIS\data\gpDirection.ashx" />
+    <Content Include="GIS\data\gpGeocode.ashx" />
+    <Content Include="DashB\data\dSensor.ashx" />
+    <Content Include="FMS\data\dScanBegin.ashx" />
+    <Content Include="FMS\data\dScanCheck.ashx" />
+    <Content Include="FMS\data\dScanData.ashx" />
+    <Content Include="FMS\data\dAudioF.ashx" />
+    <Content Include="GIS\data\dRoute.ashx" />
+    <Content Include="DMS\data\dScanData.ashx" />
+    <Content Include="FMS\data\dScanTable.ashx" />
+    <Content Include="FMS\data\dScanSchd.ashx" />
+    <Content Include="FMS\data\dScanExists.ashx" />
+    <Content Include="FMS\data\dScanCancel.ashx" />
+    <Content Include="DMS\data\DelItem.ashx" />
+    <Content Include="area\10.json" />
+    <Content Include="area\11.json" />
+    <Content Include="area\12.json" />
+    <Content Include="area\13.json" />
+    <Content Include="area\14.json" />
+    <Content Include="area\15.json" />
+    <Content Include="area\16.json" />
+    <Content Include="area\17.json" />
+    <Content Include="area\18.json" />
+    <Content Include="area\19.json" />
+    <Content Include="area\20.json" />
+    <Content Include="area\21.json" />
+    <Content Include="area\22.json" />
+    <Content Include="area\23.json" />
+    <Content Include="area\24.json" />
+    <Content Include="area\25.json" />
+    <Content Include="area\26.json" />
+    <Content Include="area\27.json" />
+    <Content Include="area\30.json" />
+    <Content Include="area\31.json" />
+    <Content Include="area\32.json" />
+    <Content Include="area\33.json" />
+    <Content Include="area\34.json" />
+    <Content Include="area\35.json" />
+    <Content Include="area\36.json" />
+    <Content Include="area\37.json" />
+    <Content Include="area\38.json" />
+    <Content Include="area\39.json" />
+    <Content Include="area\40.json" />
+    <Content Include="area\41.json" />
+    <Content Include="area\42.json" />
+    <Content Include="area\43.json" />
+    <Content Include="area\44.json" />
+    <Content Include="area\45.json" />
+    <Content Include="area\46.json" />
+    <Content Include="area\47.json" />
+    <Content Include="area\48.json" />
+    <Content Include="area\49.json" />
+    <Content Include="area\50.json" />
+    <Content Include="area\51.json" />
+    <Content Include="area\52.json" />
+    <Content Include="area\53.json" />
+    <Content Include="area\54.json" />
+    <Content Include="area\55.json" />
+    <Content Include="area\56.json" />
+    <Content Include="area\57.json" />
+    <Content Include="area\58.json" />
+    <Content Include="area\60.json" />
+    <Content Include="area\61.json" />
+    <Content Include="area\62.json" />
+    <Content Include="area\63.json" />
+    <Content Include="area\64.json" />
+    <Content Include="area\65.json" />
+    <Content Include="area\66.json" />
+    <Content Include="area\67.json" />
+    <Content Include="area\70.json" />
+    <Content Include="area\71.json" />
+    <Content Include="area\72.json" />
+    <Content Include="area\73.json" />
+    <Content Include="area\74.json" />
+    <Content Include="area\75.json" />
+    <Content Include="area\76.json" />
+    <Content Include="area\77.json" />
+    <Content Include="area\80.json" />
+    <Content Include="area\81.json" />
+    <Content Include="area\82.json" />
+    <Content Include="area\83.json" />
+    <Content Include="area\84.json" />
+    <Content Include="area\85.json" />
+    <Content Include="area\86.json" />
+    <Content Include="area\90.json" />
+    <Content Include="area\91.json" />
+    <Content Include="area\92.json" />
+    <Content Include="area\93.json" />
+    <Content Include="area\94.json" />
+    <Content Include="area\95.json" />
+    <Content Include="area\96.json" />
+    <None Include="DMS\report\occ.xls" />
+    <Content Include="FMS\data\dFStn.ashx" />
+    <Content Include="FMS\data\cReset.ashx" />
+    <Content Include="FMS\data\dScanLoc.ashx" />
+    <None Include="FMS\report\occ.xls" />
+    <Content Include="GIS\data\dEquip2.ashx" />
+    <Content Include="GIS2\icon\fonts\afms.eot" />
+    <Content Include="GIS2\icon\fonts\afms.ttf" />
+    <Content Include="GIS2\icon\fonts\afms.woff" />
+    <Content Include="GIS2\icon\selection.json" />
+    <None Include="GIS\_Inc\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="GIS\_Inc\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="GIS\_Inc\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="GIS\_Inc\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="GIS\_Inc\font\kanit-bold-webfont.woff" />
+    <None Include="GIS\_Inc\font\kanit-bold-webfont.woff2" />
+    <None Include="GIS\_Inc\font\kanit-bolditalic-webfont.woff" />
+    <None Include="GIS\_Inc\font\kanit-bolditalic-webfont.woff2" />
+    <None Include="GIS\_Inc\font\kanit-italic-webfont.woff" />
+    <None Include="GIS\_Inc\font\kanit-italic-webfont.woff2" />
+    <None Include="GIS\_Inc\font\kanit-light-webfont.woff" />
+    <None Include="GIS\_Inc\font\kanit-light-webfont.woff2" />
+    <None Include="GIS\_Inc\font\kanit-lightitalic-webfont.woff" />
+    <None Include="GIS\_Inc\font\kanit-lightitalic-webfont.woff2" />
+    <None Include="GIS\_Inc\font\kanit-medium-webfont.woff" />
+    <None Include="GIS\_Inc\font\kanit-medium-webfont.woff2" />
+    <None Include="GIS\_Inc\font\kanit-mediumitalic-webfont.woff" />
+    <None Include="GIS\_Inc\font\kanit-mediumitalic-webfont.woff2" />
+    <None Include="GIS\_Inc\font\kanit-regular-webfont.woff" />
+    <None Include="GIS\_Inc\font\kanit-regular-webfont.woff2" />
+    <None Include="GIS\_Inc\icon\fonts\afms.eot" />
+    <None Include="GIS\_Inc\icon\fonts\afms.ttf" />
+    <None Include="GIS\_Inc\icon\fonts\afms.woff" />
+    <None Include="GIS\_Inc\icon\selection.json" />
+    <Content Include="packages.config" />
+    <Content Include="GPS\area.ashx" />
+    <None Include="ISOForm\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="ISOForm\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="ISOForm\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="ISOForm\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="ISOForm\iconfont\config.json" />
+    <None Include="ISOForm\iconfont\font\fontello.eot" />
+    <None Include="ISOForm\iconfont\font\fontello.ttf" />
+    <None Include="ISOForm\iconfont\font\fontello.woff" />
+    <None Include="ISOForm\iconfont\font\fontello.woff2" />
+    <None Include="ISOForm\img\.DS_Store" />
+    <None Include="ISOForm\webfont\thsarabunnew-webfont.eot" />
+    <None Include="ISOForm\webfont\thsarabunnew-webfont.ttf" />
+    <None Include="ISOForm\webfont\thsarabunnew-webfont.woff" />
+    <None Include="ISOForm\webfont\thsarabunnew_bold-webfont.eot" />
+    <None Include="ISOForm\webfont\thsarabunnew_bold-webfont.ttf" />
+    <None Include="ISOForm\webfont\thsarabunnew_bold-webfont.woff" />
+    <None Include="ISOForm\webfont\thsarabunnew_bolditalic-webfont.eot" />
+    <None Include="ISOForm\webfont\thsarabunnew_bolditalic-webfont.ttf" />
+    <None Include="ISOForm\webfont\thsarabunnew_bolditalic-webfont.woff" />
+    <None Include="ISOForm\webfont\thsarabunnew_italic-webfont.eot" />
+    <None Include="ISOForm\webfont\thsarabunnew_italic-webfont.ttf" />
+    <None Include="ISOForm\webfont\thsarabunnew_italic-webfont.woff" />
+    <Content Include="PlugIn\dEquip.ashx" />
+    <Content Include="PlugIn\dSensor.ashx" />
+    <Content Include="PlugIn\cReset.ashx" />
+    <Content Include="PlugIn\cAttn.ashx" />
+    <Content Include="PlugIn\Download.ashx" />
+    <Content Include="PlugIn\Upload.ashx" />
+    <Content Include="PlugIn\Delete.ashx" />
+    <Content Include="PlugIn\FtpStat.ashx" />
+    <Content Include="Mango\relay.ashx" />
+    <None Include="_Inc.A\css\.DS_Store" />
+    <None Include="_Inc.A\font\.DS_Store" />
+    <None Include="_Inc.A\font\kanit-bold-webfont.woff" />
+    <None Include="_Inc.A\font\kanit-bold-webfont.woff2" />
+    <None Include="_Inc.A\font\kanit-bolditalic-webfont.woff" />
+    <None Include="_Inc.A\font\kanit-bolditalic-webfont.woff2" />
+    <None Include="_Inc.A\font\kanit-italic-webfont.woff" />
+    <None Include="_Inc.A\font\kanit-italic-webfont.woff2" />
+    <None Include="_Inc.A\font\kanit-light-webfont.woff" />
+    <None Include="_Inc.A\font\kanit-light-webfont.woff2" />
+    <None Include="_Inc.A\font\kanit-lightitalic-webfont.woff" />
+    <None Include="_Inc.A\font\kanit-lightitalic-webfont.woff2" />
+    <None Include="_Inc.A\font\kanit-medium-webfont.woff" />
+    <None Include="_Inc.A\font\kanit-medium-webfont.woff2" />
+    <None Include="_Inc.A\font\kanit-mediumitalic-webfont.woff" />
+    <None Include="_Inc.A\font\kanit-mediumitalic-webfont.woff2" />
+    <None Include="_Inc.A\font\kanit-regular-webfont.woff" />
+    <None Include="_Inc.A\font\kanit-regular-webfont.woff2" />
+    <None Include="_Inc.A\icon\fonts\nbtc.eot" />
+    <None Include="_Inc.A\icon\fonts\nbtc.ttf" />
+    <None Include="_Inc.A\icon\fonts\nbtc.woff" />
+    <None Include="_Inc.A\icon\selection.json" />
+    <None Include="_Inc.A\js\.DS_Store" />
+    <None Include="img\.DS_Store" />
+    <None Include="_Inc\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="_Inc\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="_Inc\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="_Inc\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="_Inc\font\kanit-bold-webfont.woff" />
+    <None Include="_Inc\font\kanit-bold-webfont.woff2" />
+    <None Include="_Inc\font\kanit-bolditalic-webfont.woff" />
+    <None Include="_Inc\font\kanit-bolditalic-webfont.woff2" />
+    <None Include="_Inc\font\kanit-italic-webfont.woff" />
+    <None Include="_Inc\font\kanit-italic-webfont.woff2" />
+    <None Include="_Inc\font\kanit-light-webfont.woff" />
+    <None Include="_Inc\font\kanit-light-webfont.woff2" />
+    <None Include="_Inc\font\kanit-lightitalic-webfont.woff" />
+    <None Include="_Inc\font\kanit-lightitalic-webfont.woff2" />
+    <None Include="_Inc\font\kanit-medium-webfont.woff" />
+    <None Include="_Inc\font\kanit-medium-webfont.woff2" />
+    <None Include="_Inc\font\kanit-mediumitalic-webfont.woff" />
+    <None Include="_Inc\font\kanit-mediumitalic-webfont.woff2" />
+    <None Include="_Inc\font\kanit-regular-webfont.woff" />
+    <None Include="_Inc\font\kanit-regular-webfont.woff2" />
+    <None Include="_Inc\icon\fonts\afms.eot" />
+    <None Include="_Inc\icon\fonts\afms.ttf" />
+    <None Include="_Inc\icon\fonts\afms.woff" />
+    <None Include="_Inc\icon\selection.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MapWinGIS">
+      <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52183</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/AFMProj</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

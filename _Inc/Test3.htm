@@ -1,0 +1,36 @@
+﻿
+<!doctype html>
+
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="js/skin.css">
+   <script src="../FMS/js/jquery-1.12.4.min.js"></script>
+   <script src="../FMS/js/flowplayer.min.js"></script>
+                  
+   
+<script>
+    // display information about the video type
+    flowplayer(function (api) {
+        api.on("load", function (e, api, video) {
+            $("#vinfo").text(api.engine.engineName + " engine playing " + video.type);
+        });
+    });
+</script>
+
+</head>
+
+<body>
+
+<div class="flowplayer" data-ratio="0.5625">
+
+  <video>
+      <source type="application/x-mpegurl" src="http://lmtr.nbtc.go.th/afm/1.01/157566584398062980871442080699889105485/record/5-316789-322220/playlist.m3u8">
+   </video>
+
+</div>
+
+</body>
+</html>

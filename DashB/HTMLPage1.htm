@@ -1,0 +1,396 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AFMProj.DashB.Default" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<!--#include file="../_inc/Title.asp"-->
+</head>
+<body>
+	<div class="afms-sec-container afms-page-dashboard">
+		<!--#include file="../_inc/Hd.asp"-->
+
+		
+        <div class="afms-sec-breadcrumb">
+			Dashboard
+		</div>
+
+		<div class="row afms-sec-content">
+			<div class="col-md-12">
+				<div class="panel-group afms-sec-stationlist" id="station" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default afms-stationlist-box is-online">
+						<div class="panel-heading" role="tab" id="headingStation1">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#station" href="#station1" aria-expanded="true" aria-controls="collapseOne">
+									<div class="pull-left station-name"><i class="afms-ic_record"></i>Station-1</div>
+									<div class="pull-right station-operatetime">Time to Operate: 10.00.15
+									<i class="afms-ic_unlock" data-toggle="tooltip" data-placement="bottom" title="Open Session"></i>
+								</div>
+								</a>
+							</h4>
+						</div>
+						<div id="station1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingStation1">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-12"><b>Mode :</b> Automatic</div>
+									<div class="col-md-6 col-sm-6 col-xs-12 text-right"><b>Control by :</b> Mr.Somchai</div>
+
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>Spectrum</h3>	
+												<div class="afms-frequency-box">
+													<div class="afms-frequency"></div>
+													<div class="afms-frequency-no">
+														<button class="afms-btn afms-btn-primary afms-btn-play afms-ic_play"></button> 222.25 MHz <span>(Scanning...)</span>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-6 col-sm-6">
+														<div class="panel panel-default afms-station-status panel-success" style="height: 205px">
+															<div class="panel-heading">Power meter : Plug</div>
+															<div class="panel-body">
+																<p><b>Voltage :</b> 227.94 Volt</p>
+																<p><b>Current :</b> 0.06 Amp</p>
+																<p><b>Frequency :</b> 49.95 Hz</p>
+																<p><b>Positive Active Energy :</b> 5443</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">Communication</div>
+															<div class="panel-body">
+																<div class="row">
+																	<div class="col-md-6 col-sm-6">
+																		<p><b>3G :</b> OK</p>
+																		<p><b>LAN :</b> OK</p>
+																		<p><b>WAN :</b> OK</p>
+																	</div>
+																	<div class="col-md-6 col-sm-6">
+																		<p><b>GPS :</b> OK</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6 col-sm-6">
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">UPS : 25%</div>
+															<div class="panel-body">
+																<p><b>Time to operate :</b> 30 Minutes</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">Scanner : Online</div>
+															<div class="panel-body">
+																<p><b>Atenna :</b> AZ71 [20-1500MHz]</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-danger">
+															<div class="panel-heading">Environment : Warning</div>
+															<div class="panel-body">
+																<p><b>Humidity :</b> 30%</p>
+																<p><b>Temp :</b> 35 Celcius</p>
+																<p><b>Security :</b> Door Close</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="panel panel-default afms-stationlist-box is-offline">
+
+						<div class="panel-heading" role="tab" id="headingStation2">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#station" href="#station2" aria-expanded="true" aria-controls="collapseOne">
+								<div class="pull-left station-name"><i class="afms-ic_record"></i>Station-2</div>
+								<div class="pull-right station-operatetime">Time to Operate: 10.00.15
+								<i class="afms-ic_lock"></i>
+								</div>
+								</a>
+							</h4>
+						</div>
+
+						<div id="station2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingStation2">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-12"><b>Mode :</b> Automatic</div>
+									<div class="col-md-6 col-sm-6 col-xs-12 text-right"><b>Control by :</b> Mr.Somchai</div>
+
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>Spectrum</h3>	
+												<div class="afms-frequency-box">
+													<div class="afms-frequency"></div>
+													<div class="afms-frequency-no">
+														<button class="afms-btn afms-btn-primary afms-btn-play afms-ic_play"></button> 222.25 MHz <span>(Scanning...)</span>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="panel panel-default afms-station-status panel-success" style="height: 205px">
+															<div class="panel-heading">Power meter : Plug</div>
+															<div class="panel-body">
+																<p><b>Voltage :</b> 227.94 Volt</p>
+																<p><b>Current :</b> 0.06 Amp</p>
+																<p><b>Frequency :</b> 49.95 Hz</p>
+																<p><b>Positive Active Energy :</b> 5443</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">Communication</div>
+															<div class="panel-body">
+																<div class="row">
+																	<div class="col-md-6">
+																		<p><b>3G :</b> OK</p>
+																		<p><b>LAN :</b> OK</p>
+																		<p><b>WAN :</b> OK</p>
+																	</div>
+																	<div class="col-md-6">
+																		<p><b>GPS :</b> OK</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">UPS : 25%</div>
+															<div class="panel-body">
+																<p><b>Time to operate :</b> 30 Minutes</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">Scanner : Online</div>
+															<div class="panel-body">
+																<p><b>Atenna :</b> AZ71 [20-1500MHz]</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-danger">
+															<div class="panel-heading">Environment : Warning</div>
+															<div class="panel-body">
+																<p><b>Humidity :</b> 30%</p>
+																<p><b>Temp :</b> 35 Celcius</p>
+																<p><b>Security :</b> Door Close</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default afms-stationlist-box is-offline">
+						<div class="panel-heading" role="tab" id="headingStation2">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#station" href="#station2" aria-expanded="true" aria-controls="collapseOne">
+								<div class="pull-left station-name"><i class="afms-ic_record"></i>Station-3</div>
+								<div class="pull-right station-operatetime">Time to Operate: 10.00.15
+								<i class="afms-ic_lock"></i>
+								</div>
+								</a>
+							</h4>
+						</div>
+						<div id="station2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingStation2">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-12"><b>Mode :</b> Automatic</div>
+									<div class="col-md-6 col-sm-6 col-xs-12 text-right"><b>Control by :</b> Mr.Somchai</div>
+
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>Spectrum</h3>	
+												<div class="afms-frequency-box">
+													<div class="afms-frequency"></div>
+													<div class="afms-frequency-no">
+														<button class="afms-btn afms-btn-primary afms-btn-play afms-ic_play"></button> 222.25 MHz <span>(Scanning...)</span>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="panel panel-default afms-station-status panel-success" style="height: 205px">
+															<div class="panel-heading">Power meter : Plug</div>
+															<div class="panel-body">
+																<p><b>Voltage :</b> 227.94 Volt</p>
+																<p><b>Current :</b> 0.06 Amp</p>
+																<p><b>Frequency :</b> 49.95 Hz</p>
+																<p><b>Positive Active Energy :</b> 5443</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">Communication</div>
+															<div class="panel-body">
+																<div class="row">
+																	<div class="col-md-6">
+																		<p><b>3G :</b> OK</p>
+																		<p><b>LAN :</b> OK</p>
+																		<p><b>WAN :</b> OK</p>
+																	</div>
+																	<div class="col-md-6">
+																		<p><b>GPS :</b> OK</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">UPS : 25%</div>
+															<div class="panel-body">
+																<p><b>Time to operate :</b> 30 Minutes</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">Scanner : Online</div>
+															<div class="panel-body">
+																<p><b>Atenna :</b> AZ71 [20-1500MHz]</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-danger">
+															<div class="panel-heading">Environment : Warning</div>
+															<div class="panel-body">
+																<p><b>Humidity :</b> 30%</p>
+																<p><b>Temp :</b> 35 Celcius</p>
+																<p><b>Security :</b> Door Close</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default afms-stationlist-box is-offline">
+						<div class="panel-heading" role="tab" id="headingStation2">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#station" href="#station2" aria-expanded="true" aria-controls="collapseOne">
+								<div class="pull-left station-name"><i class="afms-ic_record"></i>Station-4</div>
+								<div class="pull-right station-operatetime">Time to Operate: 10.00.15
+								<i class="afms-ic_lock"></i>
+								</div>
+								</a>
+							</h4>
+						</div>
+						<div id="station2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingStation2">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-12"><b>Mode :</b> Automatic</div>
+									<div class="col-md-6 col-sm-6 col-xs-12 text-right"><b>Control by :</b> Mr.Somchai</div>
+
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>Spectrum</h3>	
+												<div class="afms-frequency-box">
+													<div class="afms-frequency"></div>
+													<div class="afms-frequency-no">
+														<button class="afms-btn afms-btn-primary afms-btn-play afms-ic_play"></button> 222.25 MHz <span>(Scanning...)</span>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="panel panel-default afms-station-status panel-success" style="height: 205px">
+															<div class="panel-heading">Power meter : Plug</div>
+															<div class="panel-body">
+																<p><b>Voltage :</b> 227.94 Volt</p>
+																<p><b>Current :</b> 0.06 Amp</p>
+																<p><b>Frequency :</b> 49.95 Hz</p>
+																<p><b>Positive Active Energy :</b> 5443</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">Communication</div>
+															<div class="panel-body">
+																<div class="row">
+																	<div class="col-md-6">
+																		<p><b>3G :</b> OK</p>
+																		<p><b>LAN :</b> OK</p>
+																		<p><b>WAN :</b> OK</p>
+																	</div>
+																	<div class="col-md-6">
+																		<p><b>GPS :</b> OK</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">UPS : 25%</div>
+															<div class="panel-body">
+																<p><b>Time to operate :</b> 30 Minutes</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-success">
+															<div class="panel-heading">Scanner : Online</div>
+															<div class="panel-body">
+																<p><b>Atenna :</b> AZ71 [20-1500MHz]</p>
+															</div>
+														</div>
+
+														<div class="panel panel-default afms-station-status panel-danger">
+															<div class="panel-heading">Environment : Warning</div>
+															<div class="panel-body">
+																<p><b>Humidity :</b> 30%</p>
+																<p><b>Temp :</b> 35 Celcius</p>
+																<p><b>Security :</b> Door Close</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		
+		<div class="afms-push"></div>
+	</div>
+
+	<!--#include file="../_inc/Ft.asp"-->
+</body>
+
+</html>
+

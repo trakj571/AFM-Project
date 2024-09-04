@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'afms';
+  src:  url('fonts/afms.eot?ft4x40');
+  src:  url('fonts/afms.eot?ft4x40#iefix') format('embedded-opentype'),
+    url('fonts/afms.ttf?ft4x40') format('truetype'),
+    url('fonts/afms.woff?ft4x40') format('woff'),
+    url('fonts/afms.svg?ft4x40#afms') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="afms-ic_"], [class*=" afms-ic_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'afms' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.afms-ic_mappin .path1:before {
+  content: "\e91e";
+  color: rgb(255, 75, 38);
+}
+.afms-ic_mappin .path2:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(217, 63, 33);
+}
+.afms-ic_control:before {
+  content: "\e91d";
+}
+.afms-ic_focus:before {
+  content: "\e91c";
+}
+.afms-ic_check:before {
+  content: "\e91b";
+}
+.afms-ic_stop:before {
+  content: "\e91a";
+}
+.afms-ic_pause:before {
+  content: "\e919";
+}
+.afms-ic_delete:before {
+  content: "\e917";
+}
+.afms-ic_dropdown_arrow:before {
+  content: "\e914";
+}
+.afms-ic_tune:before {
+  content: "\e913";
+}
+.afms-ic_filter:before {
+  content: "\e911";
+}
+.afms-ic_minus:before {
+  content: "\e909";
+}
+.afms-ic_notice:before {
+  content: "\e918";
+}
+.afms-ic_view:before {
+  content: "\e915";
+}
+.afms-ic_radar:before {
+  content: "\e912";
+}
+.afms-ic_play:before {
+  content: "\e908";
+}
+.afms-ic_prev:before {
+  content: "\e408";
+}
+.afms-ic_next:before {
+  content: "\e409";
+}
+.afms-ic_edit:before {
+  content: "\e254";
+}
+.afms-ic_date:before {
+  content: "\e916";
+}
+.afms-ic_exit:before {
+  content: "\e879";
+}
+.afms-ic_record:before {
+  content: "\e061";
+}
+.afms-ic_first_page:before {
+  content: "\e5dc";
+}
+.afms-ic_last_page:before {
+  content: "\e5dd";
+}
+.afms-ic_print:before {
+  content: "\e8ad";
+}
+.afms-ic_play_filled:before {
+  content: "\e038";
+}
+.afms-ic_play_outline:before {
+  content: "\e039";
+}
+.afms-ic_download:before {
+  content: "\e90a";
+}
+.afms-ic_home:before {
+  content: "\e90b";
+}
+.afms-ic_lock:before {
+  content: "\e900";
+}
+.afms-ic_menu:before {
+  content: "\e901";
+}
+.afms-ic_plus_circle:before {
+  content: "\e905";
+}
+.afms-ic_plust_square:before {
+  content: "\e906";
+}
+.afms-ic_plus:before {
+  content: "\e910";
+}
+.afms-ic_power:before {
+  content: "\e902";
+}
+.afms-ic_printer:before {
+  content: "\e907";
+}
+.afms-ic_radio:before {
+  content: "\e90c";
+}
+.afms-ic_search:before {
+  content: "\e903";
+}
+.afms-ic_unlock:before {
+  content: "\e904";
+}
+.afms-ic_upload:before {
+  content: "\e90d";
+}
+.afms-ic_wifi:before {
+  content: "\e90e";
+}
+.afms-ic_close:before {
+  content: "\e90f";
+}

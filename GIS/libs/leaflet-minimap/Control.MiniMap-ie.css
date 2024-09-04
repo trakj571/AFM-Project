@@ -1,0 +1,25 @@
+.leaflet-control-minimap {
+    background: #f8f8f9;
+    border:1px solid #555;
+}
+
+.leaflet-control-minimap a {
+    background-color: rgba(255, 255, 255, 1.0);
+    background-position: 1px 2px;
+    background-repeat: no-repeat;
+    display: block;
+    outline: none;
+    z-index: 99999;
+}
+
+.leaflet-control-minimap a.minimized {
+    
+}
+
+.leaflet-control-minimap-toggle-display {
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+}

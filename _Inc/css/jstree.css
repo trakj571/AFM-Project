@@ -1,0 +1,17 @@
+﻿/* -------------------------------------- 
+       Jstree Style
+   -------------------------------------- */
+.afms-jstree { margin-bottom: 30px; }
+.afms-jstree p { font-weight: 500; }
+/*.jstree-default .jstree-themeicon { background-image: url(../img/ic_folder_color.svg); background-position: 2px 2px; background-size: 75%; }
+.jstree-default .jstree-checkbox { border: 1px solid #000000; background-color: #ffffff; width: 16px !important; height: 16px !important; margin: 4px; background-image: inherit; position: relative; }
+.jstree-default.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:before, 
+.jstree-default .jstree-checked > .jstree-checkbox:before { content: '\e919'; font-family: 'nbtc'; position: absolute; font-size: 10px; left: 1px; top: 3px; line-height: normal; color: #922d35; }
+/*.jstree-default .jstree-anchor > .jstree-undetermined:before { width: 10px !important; height: 10px !important; background-color: #922d35; position: absolute; content: ''; left: 2px; top: 2px; }*/
+.jstree-anchor { background-color: transparent !important; }
+.jstree-anchor { padding: 0 6px 0 1px; }
+.jstree-default .jstree-node { padding: 0; border: 0; min-height: 27px !important; line-height: 27px !important; }
+.jstree-default .jstree-anchor { border: 1px solid rgba(0,0,0,0) !important; border-radius: 0; background-color: transparent !important; white-space: normal !important; min-height: 24px; height: auto; padding-left: 22px; }
+.jstree-default .jstree-clicked { background-color: #a2b2c8 !important; box-shadow: none; color: #ffffff; }
+.jstree-default .jstree-anchor:hover { border: 1px solid rgba(0,0,0,0) !important; box-shadow: none; }
+.jstree-checkbox-no-clicked .jstree-icon.jstree-ocl { position: absolute; }

@@ -1,0 +1,112 @@
+﻿.div_header
+{
+	float:left;
+	margin:1px;
+	background:url("bgsch.png");
+	width:100%;
+}
+.div_header_det
+{
+	float:left;
+	margin:1px;
+	background:url("bgdet.png");
+	width:100%;
+}
+.div_header_text
+{
+	padding:0px 5px 0px 5px;
+	color:#ffffff;
+	font-size:14px;
+	float:left;
+	height:30px;
+	line-height:30px;
+	width:230px;
+	cursor:pointer;
+}
+.div_header_sch
+{
+	background:url("isch.png") no-repeat center left;
+	width:30px;
+	height:30px;
+	float:left
+}
+.div_header_rst
+{
+	background:url("irst.png") no-repeat center left;
+	width:30px;
+	height:30px;
+	float:left
+}
+.div_header_det_i
+{
+	background:url("idet.png") no-repeat center left;
+	width:30px;
+	height:30px;
+	float:left
+}
+#div_header_sch_disp, #div_header_rst_disp,#div_header_det_disp 
+{
+	float:right;
+	width:30px;
+	height:30px;
+}
+.disp_down
+{
+	background:url("idown.png") no-repeat center center;
+	float:right;
+	width:30px;
+	height:30px;
+	cursor:pointer;
+}
+.disp_up
+{
+	background:url("iup.png") no-repeat center center;
+	float:right;
+	width:30px;
+	height:30px;
+	cursor:pointer;
+}
+.div_sch_body
+{
+	background:#eeeeee;
+	clear:both;
+	padding:8px;
+	width:95%;
+	min-height:430px;
+}
+#div_rst_body{background:#fff}
+.div_sch_grp
+{
+	padding:5px;
+	background:#ffffff;
+}
+.example
+{
+	font-size:12px;
+	color:Blue;
+}
+#bSearch
+{
+	background:url("bgdet.png");
+	width:130px;
+	height:30px;
+	margin-top:10px;
+	font-weight:bold;
+}
+.list_rst 
+{
+	margin:1px;
+	background:#eeeeff;
+	padding:3px;
+}
+#div_sch_type{margin:0 0 10px 0}
+#div_sch_type_l{display:none}
+#bSearch_l 
+{
+	background:url("bgdet.png");
+	width:130px;
+	height:30px;
+	margin-top:10px;
+	font-weight:bold;
+}
+.remark{color:#777;font-size:11px}
